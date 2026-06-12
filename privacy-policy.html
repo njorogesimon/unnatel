@@ -34,59 +34,53 @@
     }
 
     /* Header / Nav */
-    header {
-      background: linear-gradient(90deg,var(--accent-1), #1b263b);
-      color: #fff;
-      padding: 18px 24px;
-      box-shadow: 0 3px 18px rgba(2,6,23,0.12);
-      position: sticky;
-      top: 0;
-      z-index: 40;
-    }
-    .nav-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-    }
-    .brand {
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-    .brand img {
-      width:48px;
-      height:48px;
-      object-fit:cover;
-      border-radius:8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-    .brand h1 {
-      font-size:18px;
-      margin:0;
-      letter-spacing:0.2px;
-    }
-    nav a {
-      color: rgba(255,255,255,0.95);
-      text-decoration:none;
-      margin-left:18px;
-      font-weight:600;
-      font-size:14px;
-    }
-    .nav-actions { display:flex; align-items:center; gap:12px; }
+   header{
+  background:linear-gradient(90deg,#0d1b2a,#1b263b);
+  color:#fff;
+  padding:20px 40px;
+  box-shadow:0 2px 10px rgba(0,0,0,.2);
+  position:sticky;
+  top:0;
+  z-index:40;
+}
 
-    .toggle-btn {
-      cursor: pointer;
-      padding:8px 12px;
-      border-radius:10px;
-      border: none;
-      background: linear-gradient(135deg,#2563eb,#00c6ff);
-      color: white;
-      font-weight:700;
-      box-shadow: 0 6px 18px rgba(37,99,235,0.18);
-    }
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:500;
+  transition:color .3s ease;
+}
+
+nav a:hover{
+  color:#00c6ff;
+}
+
+.toggle-btn{
+  cursor:pointer;
+  padding:8px 16px;
+  border-radius:8px;
+  border:none;
+  background:linear-gradient(135deg,#2563eb,#00c6ff);
+  color:#fff;
+  font-weight:bold;
+  transition:background .3s ease,transform .2s ease;
+}
+
+.toggle-btn:hover{
+  background:linear-gradient(135deg,#1d4ed8,#0099ff);
+  transform:scale(1.05);
+}
+
+body.dark header{
+  background:linear-gradient(90deg,#020617,#1e293b);
+}
 
     /* Container */
     .wrap {
@@ -259,9 +253,9 @@
 
       <a href="index.html">Home</a>
       <a href="apps.html">Apps</a>
-      <a href="privacy-policy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="contact.html">Contact</a>
+     <a href="privacy-policy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="contact.html">Contact</a>
     </div>
   </nav>
 </header>
@@ -431,46 +425,24 @@
   </footer>
 
   <script>
-    // Dark mode toggle with persistence
-    const toggleBtn = document.getElementById('themeToggle');
-    function toggleDark(){
-      document.body.classList.toggle('dark');
-      const isDark = document.body.classList.contains('dark');
-      toggleBtn.setAttribute('aria-pressed', String(isDark));
-      toggleBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
-      try { localStorage.setItem('unnatel_theme', isDark ? 'dark' : 'light'); } catch(e){}
-    }
-    // Load saved theme
-    (function(){
-      try {
-        const saved = localStorage.getItem('unnatel_theme');
-        if(saved === 'dark') {
-          document.body.classList.add('dark');
-          toggleBtn.setAttribute('aria-pressed','true');
-          toggleBtn.textContent = 'Light Mode';
-        }
-      } catch(e){}
-    })();
+function toggleDark() {
+  document.body.classList.toggle("dark");
 
-    // Smooth scroll for TOC links
-    document.querySelectorAll('.toc a').forEach(a=>{
-      a.addEventListener('click', (e)=>{
-        e.preventDefault();
-        const target = document.getElementById('policy-main');
-        if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
-      });
-    });
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+    document.getElementById("themeToggle").textContent = "Light Mode";
+  } else {
+    localStorage.setItem("theme", "light");
+    document.getElementById("themeToggle").textContent = "Dark Mode";
+  }
+}
 
-    // Make <details> accessible: toggle open/close on Enter/Space when focused
-    document.querySelectorAll('.section summary').forEach(s=>{
-      s.addEventListener('keydown', (e)=>{
-        if(e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          const parent = s.parentElement;
-          parent.open = !parent.open;
-        }
-      });
-    });
-  </script>
+window.onload = function () {
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    document.getElementById("themeToggle").textContent = "Light Mode";
+  }
+};
+</script>
 </body>
 </html>
