@@ -3,10 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact - Unnatel Technologies</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #004aad, #0077ff);
+      color: white;
+      padding: 15px 30px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero-banner {
+      background: linear-gradient(135deg, #0077ff, #00c6ff);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .hero-banner h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+    }
+    .hero-banner p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px auto;
+      max-width: 1100px;
+      padding: 0 20px;
+    }
+    .card {
+      flex: 1 1 300px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h2 {
+      color: #004aad;
+      margin-bottom: 15px;
+    }
+    .card p {
+      line-height: 1.6;
+    }
+    .contact-icon {
+      font-size: 40px;
+      color: #0077ff;
+      margin-bottom: 15px;
+    }
+    footer {
+      background: #004aad;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .dark {
+      background: #121212;
+      color: #e0e0e0;
+    }
+    .dark header, .dark footer {
+      background: #1f1f1f;
+    }
+    .dark .card {
+      background: #1e1e1e;
+      color: #e0e0e0;
+    }
+  </style>
 </head>
 
 <body>
@@ -16,10 +109,8 @@
     <div style="display:flex; align-items:center; gap:10px;">
       <strong>Unnatel Technologies</strong>
     </div>
-
     <div>
       <button class="toggle-btn" onclick="toggleDark()">Dark Mode</button>
-
       <a href="index.html">Home</a>
       <a href="apps.html">Apps</a>
       <a href="privacy-policy.html">Privacy</a>
@@ -28,32 +119,45 @@
   </nav>
 </header>
 
-<div class="container">
+<!-- Hero Banner -->
+<div class="hero-banner">
+  <h1>Contact Us</h1>
+  <p>We are here to support users, partners, and businesses. Reach out anytime — we’ll respond promptly.</p>
+</div>
 
-  <div class="hero">
-    <h1>Contact Us</h1>
-    <p>We are here to support users, partners, and businesses.</p>
+<!-- Contact Cards -->
+<div class="contact-section">
+
+  <div class="card">
+    <div class="contact-icon">📧</div>
+    <h2>Email</h2>
+    <p>support@unnatel.com</p>
+    <p>For general inquiries, technical support, or partnership opportunities.</p>
   </div>
 
   <div class="card">
-    <h2>General Contact</h2>
-    <p>Email: <strong>support@unnateltechnologies.com</strong></p>
-    <p>Location: Kenya</p>
+    <div class="contact-icon">📞</div>
+    <h2>Phone</h2>
+    <p>+254 712 991 811</p>
+    <p>Call us during business hours for immediate assistance.</p>
   </div>
 
   <div class="card">
-    <h2>Business Inquiries</h2>
+    <div class="contact-icon">📍</div>
+    <h2>Location</h2>
+    <p>ACK Rd. Street No. 9, Mwiki Estate, Nairobi</p>
+    <p>Visit our offices for consultations or demonstrations.</p>
+  </div>
+
+  <div class="card">
+    <div class="contact-icon">🌐</div>
+    <h2>Social Media</h2>
     <p>
-      For partnerships, integrations, or business opportunities,
-      please reach out via email.
+      <a href="https://www.tiktok.com/@unnateltech" target="_blank">TikTok</a> | 
+      <a href="https://www.facebook.com/unnateltech/" target="_blank">Facebook</a> | 
+      <a href="https://www.linkedin.com/in/unnateltech" target="_blank">LinkedIn</a>
     </p>
-  </div>
-
-  <div class="card">
-    <h2>Support</h2>
-    <p>
-      If you are using one of our apps and need help, include your app name in your email.
-    </p>
+    <p>Follow us for updates, news, and community engagement.</p>
   </div>
 
 </div>
@@ -66,15 +170,12 @@
 <script>
 function toggleDark() {
   document.body.classList.toggle("dark");
-
   if (document.body.classList.contains("dark")) {
     localStorage.setItem("theme", "dark");
   } else {
     localStorage.setItem("theme", "light");
   }
 }
-
-// Load saved theme
 window.onload = function () {
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark");
