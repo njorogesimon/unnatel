@@ -14,17 +14,37 @@
       color: #222;
       transition: background 0.3s ease, color 0.3s ease;
     }
-    header {
-      background: linear-gradient(90deg, #0d1b2a, #1b263b);
-      color: white;
-      padding: 15px 30px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    header{
+  background:linear-gradient(90deg,#0d1b2a,#1b263b);
+  color:#fff;
+  padding:20px 40px;
+  box-shadow:0 2px 10px rgba(0,0,0,.2);
+  position:sticky;
+  top:0;
+  z-index:40;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:500;
+  transition:color .3s ease;
+}
+
+nav a:hover{
+  color:#00c6ff;
+}
+
+body.dark header{
+  background:linear-gradient(90deg,#020617,#1e293b);
+}
     .brand {
       display: flex;
       align-items: center;
@@ -163,11 +183,16 @@
     <div style="display:flex; align-items:center; gap:10px;">
       <strong>Unnatel Technologies</strong>
     </div>
+
     <div>
-      <button class="toggle-btn" onclick="toggleDark()">Dark Mode</button>
+      <button class="toggle-btn" onclick="toggleDark()" id="themeToggle">
+        Dark Mode
+      </button>
+
       <a href="index.html">Home</a>
       <a href="apps.html">Apps</a>
       <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
@@ -225,15 +250,20 @@
 <script>
 function toggleDark() {
   document.body.classList.toggle("dark");
+
   if (document.body.classList.contains("dark")) {
     localStorage.setItem("theme", "dark");
+    document.getElementById("themeToggle").textContent = "Light Mode";
   } else {
     localStorage.setItem("theme", "light");
+    document.getElementById("themeToggle").textContent = "Dark Mode";
   }
 }
+
 window.onload = function () {
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark");
+    document.getElementById("themeToggle").textContent = "Light Mode";
   }
 };
 </script>
