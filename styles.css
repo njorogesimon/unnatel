@@ -52,3 +52,26 @@ footer {
   font-size: 14px;
   color: gray;
 }
+/* DARK MODE */
+body.dark {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+body.dark .card {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+body.dark header {
+  background: #020617;
+}
+
+.toggle-btn {
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+}
