@@ -173,6 +173,36 @@ body.dark header{
       background: linear-gradient(135deg, #1d4ed8, #0099ff);
       transform: scale(1.05);
     }
+    .apps-showcase{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+  margin-top:40px;
+
+  /* ✅ ADD THIS */
+  align-items:stretch;
+}
+
+.app-highlight{
+  flex:1 1 400px;
+
+  /* ✅ ADD THIS */
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+
+/* ✅ forces same top alignment of all content */
+.app-highlight h2,
+.app-highlight img,
+.app-highlight p,
+.app-highlight ul{
+  margin-top:0;
+}
+    .app-highlight h2{
+  margin-top:15px;
+}
   </style>
 </head>
 
