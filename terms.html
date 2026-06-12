@@ -1,202 +1,432 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms & Conditions - Unnatel Technologies</title>
+  <meta charset="utf-8" />
+  <title>Terms & Conditions - Unnatel Technologies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Terms & Conditions for Unnatel Technologies and the Unnascan application." />
+  <meta name="author" content="Unnatel Technologies" />
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f6f8;
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
+  <style>
+    :root{
+      --max-width:980px;
+      --bg:#f5f6f8;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent-1:#0d1b2a;
+      --accent-2:#0077ff;
+      --radius:14px;
+      --shadow: 0 8px 30px rgba(13,27,42,0.08);
+    }
 
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    background: #fff;
-    padding: 35px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-}
+    html,body{height:100%}
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: #111827;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+      transition: background .25s ease, color .25s ease;
+    }
 
-.header {
-    text-align: center;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
-    margin-bottom: 25px;
-}
+    header {
+      background: linear-gradient(90deg,var(--accent-1), #1b263b);
+      color: #fff;
+      padding: 18px 24px;
+      box-shadow: 0 3px 18px rgba(2,6,23,0.12);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .brand img {
+      width:44px;
+      height:44px;
+      object-fit:cover;
+      border-radius:8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .brand h1 {
+      font-size:18px;
+      margin:0;
+      letter-spacing:0.2px;
+    }
+    .nav-actions { display:flex; align-items:center; gap:12px; }
+    nav a {
+      color: rgba(255,255,255,0.95);
+      text-decoration:none;
+      margin-left:18px;
+      font-weight:600;
+      font-size:14px;
+    }
 
-.brand {
-    font-weight: bold;
-    color: #1a73e8;
-}
+    .toggle-btn {
+      cursor: pointer;
+      padding:8px 12px;
+      border-radius:10px;
+      border: none;
+      background: linear-gradient(135deg,#2563eb,#00c6ff);
+      color: white;
+      font-weight:700;
+      box-shadow: 0 6px 18px rgba(37,99,235,0.18);
+    }
 
-h1 {
-    margin: 0;
-}
+    .wrap {
+      max-width: var(--max-width);
+      margin: 36px auto;
+      padding: 0 20px 80px;
+    }
 
-h2 {
-    margin-top: 30px;
-    color: #222;
-}
+    .hero {
+      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(240,246,255,0.95));
+      border-radius: var(--radius);
+      padding: 36px;
+      box-shadow: var(--shadow);
+      display:flex;
+      gap:24px;
+      align-items:center;
+      overflow:hidden;
+    }
+    .hero-left { flex:1 1 520px; }
+    .hero h2 { margin:0 0 8px; font-size:28px; color:var(--accent-1); }
+    .hero p.lead { margin:0; color:var(--muted); font-size:15px; }
+    .hero-visual {
+      width:160px;
+      height:120px;
+      border-radius:12px;
+      background: linear-gradient(135deg,#e6f0ff,#ffffff);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow: 0 8px 30px rgba(3,102,214,0.06);
+    }
+    .hero-visual img { width:120px; height:auto; border-radius:8px; }
 
-p, li {
-    line-height: 1.7;
-}
+    .policy {
+      margin-top:28px;
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:24px;
+      align-items:start;
+    }
 
-.footer {
-    margin-top: 40px;
-    border-top: 1px solid #eee;
-    padding-top: 15px;
-    text-align: center;
-    font-size: 14px;
-    color: #777;
-}
+    .policy-main {
+      background:var(--card);
+      border-radius:12px;
+      padding:26px;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.06);
+    }
+    .policy-main h3 { margin-top:0; color:var(--accent-1); }
+    .policy-main p, .policy-main li { color:#374151; }
+    .policy-main ul { padding-left:18px; margin-top:8px; }
 
-a {
-    color: #1a73e8;
-    text-decoration: none;
-}
-</style>
+    .policy-side {
+      position:sticky;
+      top:96px;
+      align-self:start;
+    }
+    .toc {
+      background: linear-gradient(180deg,#ffffff,#f8fbff);
+      padding:18px;
+      border-radius:12px;
+      box-shadow: 0 6px 20px rgba(2,6,23,0.04);
+    }
+    .toc h4 { margin:0 0 8px; font-size:15px; color:var(--accent-1); }
+    .toc ol { padding-left:18px; margin:0; color:var(--muted); }
+    .toc a { color:var(--accent-2); text-decoration:none; font-weight:600; font-size:14px; }
+    .toc a:hover { text-decoration:underline; }
 
+    .contact-card {
+      margin-top:16px;
+      padding:16px;
+      border-radius:12px;
+      background:linear-gradient(180deg,#fff,#fbfdff);
+      box-shadow: 0 6px 18px rgba(2,6,23,0.04);
+      color:#0b1220;
+    }
+    .contact-card p { margin:8px 0; color:#374151; }
+
+    .section {
+      margin-bottom:18px;
+      border-radius:10px;
+      overflow:hidden;
+      border:1px solid rgba(15,23,42,0.04);
+    }
+    .section summary {
+      list-style:none;
+      cursor:pointer;
+      padding:14px 18px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.6), rgba(245,249,255,0.6));
+      font-weight:700;
+      color:var(--accent-1);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .section summary::-webkit-details-marker { display:none; }
+    .section .content { padding:18px; background:transparent; color:#374151; }
+
+    footer {
+      padding:28px 20px;
+      text-align:center;
+      color:#94a3b8;
+      background:transparent;
+    }
+
+    @media (max-width:980px){
+      .policy { grid-template-columns: 1fr; }
+      .policy-side { position:static; top:auto; }
+      .hero { flex-direction:column; text-align:center; gap:18px; }
+      .hero-visual { margin:0 auto; }
+    }
+
+    /* Dark mode */
+    body.dark {
+      --bg:#071025;
+      --card:#0b1220;
+      --muted:#9aa6b2;
+      --accent-1:#e6eefc;
+      --accent-2:#4fd1ff;
+      background: #071025;
+      color: #e6eefc;
+    }
+    body.dark .hero { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); }
+    body.dark .toc, body.dark .contact-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); }
+    body.dark .policy-main { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); box-shadow:none; border:1px solid rgba(255,255,255,0.03); }
+    body.dark header { background: linear-gradient(90deg,#020617,#071025); box-shadow:none; }
+
+    .muted { color:var(--muted); font-size:14px; }
+    .small { font-size:13px; color:var(--muted); }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+  <header>
+    <div class="nav-inner" role="navigation" aria-label="Main navigation">
+      <div class="brand" aria-hidden="false">
+        <img src="assets/images/unnascan-logo.jpeg" alt="Unnatel logo" />
+        <div>
+          <h1>Unnatel Technologies</h1>
+          <div class="small">Secure payments • School systems • Custom apps</div>
+        </div>
+      </div>
 
-<div class="header">
-    <h1>Terms & Conditions</h1>
-    <p class="brand">Unnatel Technologies</p>
-    <p><strong>Effective Date:</strong> 1st June 2026</p>
-</div>
+      <div class="nav-actions" role="group" aria-label="Site links">
+        <a href="index.html">Home</a>
+        <a href="apps.html">Apps</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+        <button class="toggle-btn" onclick="toggleDark()" aria-pressed="false" id="themeToggle">Dark Mode</button>
+      </div>
+    </div>
+  </header>
 
-<p>
-Welcome to Unnascan. By installing, accessing, or using the application, you agree to these Terms and Conditions.
-If you do not agree with any part of these terms, you should discontinue use of the application.
-</p>
+  <main class="wrap" id="maincontent">
+    <section class="hero" aria-labelledby="terms-title">
+      <div class="hero-left">
+        <h2 id="terms-title">Terms & Conditions</h2>
+        <p class="lead">These terms govern your use of the Unnascan application and related services provided by Unnatel Technologies.</p>
+        <p class="small" style="margin-top:10px">Effective date: <strong>1 June 2026</strong></p>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <img src="assets/images/unnascan-logo.jpeg" alt="" />
+      </div>
+    </section>
 
-<h2>1. Payment Processing and Verification Charges</h2>
+    <div class="policy" role="region" aria-label="Terms content">
+      <div class="policy-main" id="terms-main">
+        <h3>Welcome</h3>
+        <p>Welcome to Unnascan. By installing, accessing, or using the application you agree to these Terms & Conditions. If you do not agree with any part of these terms, discontinue use of the application.</p>
 
-<p>
-Payments processed through Unnascan are handled through secure payment channels.
-A processing fee of KSh 2 is applied to each transaction and is included in the total amount payable.
-</p>
+        <details class="section" open>
+          <summary>1. Payment Processing and Verification Charges</summary>
+          <div class="content">
+            <p>Payments processed through Unnascan are handled through secure payment channels. A processing fee of <strong>KSh 2</strong> is applied to each transaction and is included in the total amount payable.</p>
+            <p>To verify ownership of a mobile phone number and enhance platform security, Unnascan may initiate a <strong>KSh 1</strong> M-Pesa STK Push verification request in the following circumstances:</p>
+            <ul>
+              <li>During phone number registration or verification.</li>
+              <li>During QR code creation or activation processes.</li>
+            </ul>
+            <p>By proceeding with phone verification or QR code creation, you authorize Unnascan to send the KSh 1 verification request to the mobile number provided. Verification charges are generally non-refundable once processed, except where required by law or where a transaction is processed in error.</p>
+          </div>
+        </details>
 
-<p>
-To verify ownership of a mobile phone number and enhance platform security, Unnascan may initiate a KSh 1 M-Pesa STK Push verification request in the following circumstances:
-</p>
+        <details class="section">
+          <summary>2. Safaricom Reversal Policy</summary>
+          <div class="content">
+            <p>Overpayments or erroneous transactions are subject to Safaricom's official reversal procedures. Unnascan is not responsible for delays, disputes, failed reversals, or outcomes arising from Safaricom's reversal processes.</p>
+          </div>
+        </details>
 
-<ul>
-    <li>During phone number registration or verification.</li>
-    <li>During QR code creation or activation processes.</li>
-</ul>
+        <details class="section">
+          <summary>3. User Acceptance and Eligibility</summary>
+          <div class="content">
+            <p>By using Unnascan and selecting "I Agree", you confirm that:</p>
+            <ul>
+              <li>You have read and understood these Terms and Conditions.</li>
+              <li>You agree to be bound by these Terms and Conditions.</li>
+              <li>You accept these terms for current and future features within the application.</li>
+              <li>You acknowledge that certain verification actions may require a KSh 1 M-Pesa verification charge as described above.</li>
+            </ul>
+          </div>
+        </details>
 
-<p>
-By proceeding with phone verification or QR code creation, you authorize Unnascan to send the KSh 1 verification request to the mobile number provided. The verification charge is used solely to confirm ownership of the phone number and support fraud prevention measures.
-</p>
+        <details class="section">
+          <summary>4. User Responsibilities</summary>
+          <div class="content">
+            <p>Users agree to:</p>
+            <ul>
+              <li>Provide accurate information where required.</li>
+              <li>Use the application lawfully and responsibly.</li>
+              <li>Not engage in fraudulent, abusive, or unauthorized activities.</li>
+            </ul>
+          </div>
+        </details>
 
-<p>
-Verification charges are generally non-refundable once successfully processed, except where required by applicable law or where a transaction is determined to have been processed in error.
-</p>
+        <details class="section">
+          <summary>5. Service Availability</summary>
+          <div class="content">
+            <p>While we strive to maintain uninterrupted service, Unnascan does not guarantee continuous availability and may perform maintenance, upgrades, or service modifications at any time.</p>
+          </div>
+        </details>
 
-<h2>2. Safaricom Reversal Policy</h2>
+        <details class="section">
+          <summary>6. Limitation of Liability</summary>
+          <div class="content">
+            <p>To the maximum extent permitted by law, Unnatel Technologies shall not be liable for indirect, incidental, consequential, or special damages arising from the use or inability to use the application.</p>
+          </div>
+        </details>
 
-<p>
-Overpayments or erroneous transactions are subject to Safaricom's official reversal procedures.
-Unnascan shall not be responsible for delays, disputes, failed reversals, or outcomes arising from Safaricom's reversal processes.
-</p>
+        <details class="section">
+          <summary>7. Indemnity</summary>
+          <div class="content">
+            <p>You agree to indemnify and hold harmless Unnatel Technologies from claims, losses, liabilities, damages, costs, and expenses resulting from:</p>
+            <ul>
+              <li>Your violation of these Terms and Conditions.</li>
+              <li>Your misuse of the application.</li>
+              <li>Your failure to comply with applicable payment service procedures.</li>
+            </ul>
+          </div>
+        </details>
 
-<h2>3. User Acceptance and Eligibility</h2>
+        <details class="section">
+          <summary>8. Intellectual Property</summary>
+          <div class="content">
+            <p>All trademarks, logos, software, content, and related materials associated with Unnascan remain the property of Unnatel Technologies unless otherwise stated.</p>
+          </div>
+        </details>
 
-<p>
-By using Unnascan and selecting "I Agree", you confirm that:
-</p>
+        <details class="section">
+          <summary>9. Amendments</summary>
+          <div class="content">
+            <p>We may update these Terms and Conditions from time to time. Continued use of the application after updates constitutes acceptance of the revised terms. We will post the updated effective date on this page.</p>
+          </div>
+        </details>
 
-<ul>
-    <li>You have read and understood these Terms and Conditions.</li>
-    <li>You agree to be bound by these Terms and Conditions.</li>
-    <li>You accept these terms for both current and future features available within the application.</li>
-    <li>You acknowledge and agree that certain verification actions within the application may require a KSh 1 M-Pesa verification charge as described in these Terms.</li>
-</ul>
+        <details class="section">
+          <summary>10. Governing Law</summary>
+          <div class="content">
+            <p>These Terms and Conditions shall be governed by the laws of Kenya.</p>
+          </div>
+        </details>
 
-<h2>4. User Responsibilities</h2>
+        <details class="section">
+          <summary>11. Contact Information</summary>
+          <div class="content">
+            <p><strong>Unnatel Technologies</strong><br>Kenya</p>
+            <p>Email: <a href="mailto:unnatel2021@gmail.com">unnatel2021@gmail.com</a></p>
+            <p class="small">If you have questions about these terms, please contact us using the details above.</p>
+          </div>
+        </details>
 
-<p>
-Users agree to:
-</p>
+        <div style="margin-top:18px" class="small muted">Last updated: 1 June 2026</div>
+      </div>
 
-<ul>
-    <li>Provide accurate information where required.</li>
-    <li>Use the application lawfully and responsibly.</li>
-    <li>Not engage in fraudulent, abusive, or unauthorized activities.</li>
-</ul>
+      <aside class="policy-side" aria-label="Quick links and contact">
+        <div class="toc" aria-hidden="false">
+          <h4>On this page</h4>
+          <ol>
+            <li><a href="#terms-main">Overview & Sections</a></li>
+            <li><a href="#terms-main">1. Payment Processing</a></li>
+            <li><a href="#terms-main">2. Reversal Policy</a></li>
+            <li><a href="#terms-main">3. User Acceptance</a></li>
+            <li><a href="#terms-main">4. Responsibilities</a></li>
+            <li><a href="#terms-main">5–11. Other Terms</a></li>
+          </ol>
+        </div>
 
-<h2>5. Service Availability</h2>
+        <div class="contact-card" role="region" aria-label="Contact information">
+          <h4 style="margin:0 0 8px">Contact</h4>
+          <p class="small">Email</p>
+          <p><a href="mailto:unnatel2021@gmail.com">unnatel2021@gmail.com</a></p>
+          <p class="small" style="margin-top:10px">Phone</p>
+          <p>+254 712 991 811</p>
+          <p style="margin-top:12px"><a href="contact.html" style="color:var(--accent-2); font-weight:700; text-decoration:none">Get in touch →</a></p>
+        </div>
+      </aside>
+    </div>
+  </main>
 
-<p>
-While we strive to maintain uninterrupted service, UnnaScan does not guarantee continuous availability and may perform maintenance, upgrades, or service modifications at any time.
-</p>
+  <footer>
+    <div style="max-width:var(--max-width); margin:auto;">
+      © 2026 Unnatel Technologies. All rights reserved.
+    </div>
+  </footer>
 
-<h2>6. Limitation of Liability</h2>
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    function toggleDark(){
+      document.body.classList.toggle('dark');
+      const isDark = document.body.classList.contains('dark');
+      toggleBtn.setAttribute('aria-pressed', String(isDark));
+      toggleBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+      try { localStorage.setItem('unnatel_theme', isDark ? 'dark' : 'light'); } catch(e){}
+    }
+    (function(){
+      try {
+        const saved = localStorage.getItem('unnatel_theme');
+        if(saved === 'dark') {
+          document.body.classList.add('dark');
+          toggleBtn.setAttribute('aria-pressed','true');
+          toggleBtn.textContent = 'Light Mode';
+        }
+      } catch(e){}
+    })();
 
-<p>
-To the maximum extent permitted by law, Unnatel Technologies shall not be liable for indirect, incidental, consequential, or special damages arising from the use or inability to use the application.
-</p>
+    // Smooth scroll for TOC links
+    document.querySelectorAll('.toc a').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const target = document.getElementById('terms-main');
+        if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
 
-<h2>7. Indemnity</h2>
-
-<p>
-You agree to indemnify and hold harmless Unnatel Technologies from claims, losses, liabilities, damages, costs, and expenses resulting from:
-</p>
-
-<ul>
-    <li>Your violation of these Terms and Conditions.</li>
-    <li>Your misuse of the application.</li>
-    <li>Your failure to comply with applicable payment service procedures.</li>
-</ul>
-
-<h2>8. Intellectual Property</h2>
-
-<p>
-All trademarks, logos, software, content, and related materials associated with Unnascan remain the property of Unnatel Technologies unless otherwise stated.
-</p>
-
-<h2>9. Amendments</h2>
-
-<p>
-We may update these Terms and Conditions from time to time. Continued use of the application after updates constitutes acceptance of the revised terms.
-</p>
-
-<h2>10. Governing Law</h2>
-
-<p>
-These Terms and Conditions shall be governed by the laws of Kenya.
-</p>
-
-<h2>11. Contact Information</h2>
-
-<p>
-<strong>Unnatel Technologies</strong><br>
-Kenya<br>
-Email: <a href="mailto:unnatel2021@gmail.com">unnatel2021@gmail.com</a>
-</p>
-
-<p>
-<a href="index.html">View Privacy Policy</a>
-</p>
-
-</div>
-
-<div class="footer">
-    © 2026 Unnatel Technologies. All Rights Reserved.
-</div>
-
+    // Accessible details toggle via keyboard
+    document.querySelectorAll('.section summary').forEach(s=>{
+      s.addEventListener('keydown', (e)=>{
+        if(e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const parent = s.parentElement;
+          parent.open = !parent.open;
+        }
+      });
+    });
+  </script>
 </body>
 </html>
-```
