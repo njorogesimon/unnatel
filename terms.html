@@ -36,7 +36,13 @@ transition:color .3s ease
 nav a:hover{
 color:#00c6ff
 }
-
+a {
+  text-decoration: none;
+}
+  a:hover {
+  text-decoration: none;
+  opacity: 0.85;
+}
 .toggle-btn{
 cursor:pointer;
 padding:8px 16px;
@@ -158,7 +164,19 @@ gap:24px;
   box-shadow:0 6px 20px rgba(2,6,23,.04);
 }
 .toc a{color:#0077ff;text-decoration:none}
+.toc ol {
+  counter-reset: item;
+}
 
+.toc ol li {
+  counter-increment: item;
+}
+
+.toc ol li a::before {
+  content: counter(item) ". ";
+  color: #0077ff;
+  font-weight: 600;
+}
 .section{margin-bottom:18px;border:1px solid #eee;border-radius:10px}
 .section summary{cursor:pointer;padding:14px 18px;font-weight:700}
 .section .content{padding:0 18px 18px}
@@ -281,14 +299,14 @@ body.dark header {
 <div class="policy-main">
 
 <details class="section" id="intro" open>
-<summary>Introduction</summary>
+
 <div class="content">
 <p>Welcome to Unnascan. By installing, accessing, or using the Unnascan application, you agree to comply with and be bound by these Terms, Conditions, and Privacy Policy. If you do not agree with any part of these terms, you should not use the application.</p>
 </div>
 </details>
 
 <details class="section" id="payment">
-<summary>1. Payment Processing</summary>
+
 <div class="content">
 <p>All payments made through Unnascan are processed through our secure payment system.</p>
 <p>A processing fee of Kshs 2 applies to each transaction and is included in the total amount payable.</p>
@@ -398,18 +416,21 @@ body.dark header {
 <div class="toc">
 <h4>On this page</h4>
 <ol>
-<li><a href="#intro">Introduction</a></li>
-<li><a href="#payment">Payment Processing</a></li>
-<li><a href="#reversal">Reversal Policy</a></li>
-<li><a href="#acceptance">User Acceptance</a></li>
-<li><a href="#collection">Collection of Information</a></li>
-<li><a href="#use">Use of Information</a></li>
-<li><a href="#sharing">Sharing</a></li>
-<li><a href="#security">Security</a></li>
-<li><a href="#retention">Retention</a></li>
-<li><a href="#rights">Rights</a></li>
-<li><a href="#cookies">Cookies</a></li>
-<li><a href="#contact">Contact</a></li>
+  <li><a href="#intro">Introduction</a></li>
+  <li><a href="#payment">Payment Processing</a></li>
+  <li><a href="#reversal">Reversal Policy</a></li>
+  <li><a href="#acceptance">User Acceptance</a></li>
+  <li><a href="#collection">Collection of Information</a></li>
+  <li><a href="#use">Use of Information</a></li>
+  <li><a href="#sharing">Sharing of Information</a></li>
+  <li><a href="#security">Data Security</a></li>
+  <li><a href="#retention">Data Retention</a></li>
+  <li><a href="#rights">Your Rights</a></li>
+  <li><a href="#cookies">Cookies</a></li>
+  <li><a href="#indemnity">Indemnity</a></li>
+  <li><a href="#amendments">Amendments</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#finalaccept">Acceptance</a></li>
 </ol>
 </div>
 </aside>
