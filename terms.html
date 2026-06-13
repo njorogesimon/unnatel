@@ -165,17 +165,28 @@ gap:24px;
 }
 .toc a{color:#0077ff;text-decoration:none}
 .toc ol {
-  counter-reset: item;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  counter-reset: section;
 }
 
 .toc ol li {
-  counter-increment: item;
+  counter-increment: section;
+  margin: 6px 0;
 }
 
-.toc ol li a::before {
-  content: counter(item) ". ";
+.toc ol li a {
+  text-decoration: none;
+  color: #0077ff;
+  font-weight: 500;
+}
+
+.toc ol li::before {
+  content: counter(section) ". ";
   color: #0077ff;
   font-weight: 600;
+  margin-right: 6px;
 }
 .section{margin-bottom:18px;border:1px solid #eee;border-radius:10px}
 .section summary{cursor:pointer;padding:14px 18px;font-weight:700}
@@ -299,14 +310,14 @@ body.dark header {
 <div class="policy-main">
 
 <details class="section" id="intro" open>
-
+<summary>Introduction</summary>
 <div class="content">
 <p>Welcome to Unnascan. By installing, accessing, or using the Unnascan application, you agree to comply with and be bound by these Terms, Conditions, and Privacy Policy. If you do not agree with any part of these terms, you should not use the application.</p>
 </div>
 </details>
 
 <details class="section" id="payment">
-
+<summary>Payment Processing</summary>
 <div class="content">
 <p>All payments made through Unnascan are processed through our secure payment system.</p>
 <p>A processing fee of Kshs 2 applies to each transaction and is included in the total amount payable.</p>
