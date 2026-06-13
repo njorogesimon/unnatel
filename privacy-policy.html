@@ -39,6 +39,12 @@ html{
 details{
   scroll-margin-top:120px;
 }
+    nav a.active {
+  color: #00c6ff;
+  font-weight: 700;
+  border-bottom: 2px solid #00c6ff;
+  padding-bottom: 4px;
+}
     /* Header / Nav */
    header{
   background:linear-gradient(90deg,#0d1b2a,#1b263b);
@@ -537,6 +543,19 @@ document.querySelectorAll('.toc a').forEach(link => {
       });
     }
   });
+});
+</script>
+  <script>
+const currentPage = window.location.pathname.split("/").pop();
+
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(link => {
+  const linkPage = link.getAttribute("href");
+
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  }
 });
 </script>
 </body>
