@@ -108,10 +108,15 @@ body.dark header{
   justify-content:space-between;
   align-items:center;
   gap:24px;
+  flex-wrap:nowrap; /* 🔥 prevents image dropping below */
 }
 
 .hero-left{
   flex:1;
+  min-width:0; /* 🔥 prevents text forcing layout break */
+}
+.hero-visual{
+  flex-shrink:0;
 }
     /* Hero */
     .hero-visual{
