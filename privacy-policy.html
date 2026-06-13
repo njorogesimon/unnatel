@@ -339,6 +339,77 @@ footer {
     .small { font-size:13px; color:var(--muted); }
     .kbd { background:#eef6ff; padding:6px 8px; border-radius:8px; font-weight:700; color:#0b3b6f; font-size:13px; }
     body.dark .kbd { background: rgba(255,255,255,0.04); color:#cfefff; }
+    /* =========================
+   MOBILE RESPONSIVE FIX
+========================= */
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 15px 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav a {
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .toggle-btn {
+    width: 100%;
+  }
+
+  .hero-banner {
+    padding: 50px 15px;
+  }
+
+  .hero-banner h1 {
+    font-size: 1.8em;
+    line-height: 1.2;
+  }
+
+  .hero-banner p {
+    font-size: 1em;
+  }
+
+  .apps-showcase {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+  }
+
+  .app-highlight {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .app-header img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .app-title h2 {
+    font-size: 20px;
+  }
+}
   </style>
 </head>
 <body>
