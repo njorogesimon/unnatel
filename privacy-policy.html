@@ -84,8 +84,11 @@ nav a:hover{
   transform:scale(1.05);
 }
 
-body.dark header{
-  background:linear-gradient(90deg,#020617,#1e293b);
+body.dark header {
+  background: linear-gradient(90deg, #020617, #1e293b);
+}
+body.dark footer {
+  background: #1f1f1f;
 }
 
     /* Container */
@@ -238,7 +241,13 @@ body.dark .hero-visual span{
       background:transparent;
       color:#374151;
     }
-
+footer {
+  background: #004aad;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
     /* Print friendly */
     @media print {
       header, .toc, .toggle-btn { display:none; }
@@ -479,11 +488,9 @@ body.dark .hero-visual span{
     </div>
   </main>
 
-  <footer style="padding:28px 20px; text-align:center; color:#94a3b8; background:transparent;">
-    <div style="max-width:var(--max-width); margin:auto;">
-      © 2026 Unnatel Technologies. All rights reserved.
-    </div>
-  </footer>
+<footer>
+  © 2026 Unnatel Technologies. All rights reserved.
+</footer>
 
  <script>
 function toggleDark() {
