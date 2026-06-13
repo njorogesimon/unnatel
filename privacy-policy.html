@@ -96,40 +96,47 @@ body.dark header{
     }
 
     /* Hero */
-    .hero {
-      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(240,246,255,0.9));
-      border-radius: var(--radius);
-      padding: 36px;
-      box-shadow: var(--shadow);
-      display:flex;
-      gap:24px;
-      align-items:center;
-      overflow:hidden;
-    }
-    .hero-left {
-      flex:1 1 520px;
-    }
-    .hero h2 {
-      margin:0 0 8px;
-      font-size:28px;
-      color:var(--accent-1);
-    }
-    .hero p.lead {
-      margin:0;
-      color:var(--muted);
-      font-size:15px;
-    }
-    .hero-visual {
-      width:160px;
-      height:120px;
-      border-radius:12px;
-      background: linear-gradient(135deg,#e6f0ff,#ffffff);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      box-shadow: 0 8px 30px rgba(3,102,214,0.06);
-    }
-    .hero-visual img { width:120px; height:auto; border-radius:8px; }
+    .hero-visual{
+  width:220px;
+  height:160px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#e6f0ff,#ffffff);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  box-shadow:0 8px 30px rgba(3,102,214,.08);
+  padding:15px;
+}
+
+.hero-visual img{
+  width:90px;
+  height:90px;
+  object-fit:contain;
+  margin-bottom:10px;
+}
+
+.hero-visual span{
+  margin-top:10px;
+  font-size:14px;
+  font-weight:700;
+  color:#004aad;
+  text-align:center;
+}
+}
+
+body.dark .hero-visual{
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.03),
+    rgba(255,255,255,.01)
+  );
+}
+
+body.dark .hero-visual span{
+  color:#4fd1ff;
+}
 
     /* Main content */
     .policy {
@@ -273,9 +280,10 @@ body.dark header{
         <p class="lead">How Unnatel Technologies collects, uses, stores and protects information for Unnascan and related services.</p>
         <p class="small" style="margin-top:10px">Effective date: <strong>1 June 2026</strong></p>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <img src="assets/images/unnascan-logo.jpeg" alt="" />
-      </div>
+     <div class="hero-visual">
+  <img src="assets/images/unnascan-logo.jpeg" alt="Unnascan Logo" />
+  <span>🔒 Data Protection</span>
+</div>
     </section>
 
     <div class="policy" role="region" aria-label="Privacy policy content">
