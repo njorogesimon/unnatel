@@ -157,13 +157,6 @@ gap:24px;
   scroll-margin-top:120px;
 }
 
-.toc{
-  padding:18px;
-  background:linear-gradient(180deg,#ffffff,#f8fbff);
-  border-radius:12px;
-  box-shadow:0 6px 20px rgba(2,6,23,.04);
-}
-.toc a{color:#0077ff;text-decoration:none}
 .toc ol {
   list-style: none;
   padding-left: 0;
@@ -174,19 +167,21 @@ gap:24px;
 .toc ol li {
   counter-increment: section;
   margin: 6px 0;
-}
-
-.toc ol li a {
-  text-decoration: none;
-  color: #0077ff;
-  font-weight: 500;
+  display: flex;
+  gap: 6px;
 }
 
 .toc ol li::before {
-  content: counter(section) ". ";
+  content: counter(section) ".";
   color: #0077ff;
   font-weight: 600;
-  margin-right: 6px;
+  min-width: 22px;
+}
+
+.toc a {
+  color: #0077ff;
+  text-decoration: none;
+  font-weight: 500;
 }
 .section{margin-bottom:18px;border:1px solid #eee;border-radius:10px}
 .section summary{cursor:pointer;padding:14px 18px;font-weight:700}
