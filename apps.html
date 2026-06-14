@@ -187,16 +187,12 @@ nav a.active {
 }
 
 /* BUTTON */
-.app-highlight a{
+.app-highlight > a{
   margin-top:auto;
   display:inline-block;
   padding:10px 14px;
   background:#0077ff;
   color:white;
-  text-decoration:none;
-  border-radius:8px;
-  text-align:center;
-  font-weight:600;
 }
 
 .app-highlight a:hover{
@@ -213,7 +209,7 @@ footer{
 }
 
 /* DARK MODE */
-.dark{
+body.dark{
   background:#121212;
   color:#e0e0e0;
 }
@@ -295,6 +291,72 @@ body.dark header{
 }
   body.dark footer{
   background:#0b1220;
+}
+  /* IMPROVED DARK MODE */
+
+body.dark{
+  background:#121212;
+  color:#e0e0e0;
+}
+
+body.dark .app-highlight{
+  background:#1e1e1e;
+  color:#e0e0e0;
+}
+
+body.dark .app-details,
+body.dark .app-details p,
+body.dark .app-details ul,
+body.dark .app-details li{
+  color:#e0e0e0;
+}
+
+body.dark .app-details h2,
+body.dark .app-details h3{
+  color:#00c6ff;
+}
+
+body.dark .app-title h2{
+  color:#00c6ff;
+}
+
+body.dark .app-title span{
+  color:#bdbdbd;
+}
+
+body.dark .tag{
+  background:#2c2c2c;
+  color:#00c6ff;
+}
+
+body.dark .app-header img{
+  background:#2c2c2c;
+}
+
+body.dark .btn.secondary{
+  border-color:#00c6ff;
+  color:#00c6ff;
+}
+
+body.dark .btn.secondary:hover{
+  background:#00c6ff;
+  color:#121212;
+}
+
+body.dark .hero-banner{
+  background:linear-gradient(135deg,#0f172a,#1e40af);
+}
+
+body.dark footer{
+  background:#0b1220;
+}
+
+body.dark a{
+  color:#7dd3fc;
+}
+
+body.dark a:hover{
+  color:#38bdf8;
 }
   /* =========================
    MOBILE RESPONSIVE FIX
