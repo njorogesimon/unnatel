@@ -14,6 +14,18 @@
       background: #f9f9f9;
       color: #333;
     }
+    .logo-container{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+  border-radius:10px;
+}
     /* Header / Nav */
 header{
   background:linear-gradient(90deg,#0d1b2a,#1b263b);
@@ -215,9 +227,10 @@ nav a.active {
 
 <header>
   <nav>
-    <div style="display:flex; align-items:center; gap:10px;">
-      <strong>Unnatel Technologies</strong>
-    </div>
+    <div class="logo-container">
+  <img src="assets/images/logounnnatel.png" alt="Unnatel Technologies Logo" class="logo">
+  <strong>Unnatel Technologies</strong>
+</div>
 
     <div>
       <button class="toggle-btn" onclick="toggleDark()" id="themeToggle">
