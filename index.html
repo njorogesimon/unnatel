@@ -48,6 +48,18 @@ nav a{
 nav a:hover{
   color:#00c6ff;
 }
+    .logo-container{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+  border-radius:10px;
+}
     .hero-banner {
   background: linear-gradient(135deg, #0077ff, #00c6ff);
   color: white;
@@ -216,9 +228,10 @@ nav a:hover{
 
 <header>
   <nav>
-    <div style="display:flex; align-items:center; gap:10px;">
-      <strong>Unnatel Technologies</strong>
-    </div>
+    <div class="logo-container">
+  <img src="assets/images/logounnnatel.png" alt="Unnatel Technologies Logo" class="logo">
+  <strong>Unnatel Technologies</strong>
+</div>
 
    <div>
   <button class="toggle-btn" onclick="toggleDark()" id="themeToggle">
