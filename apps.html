@@ -5,394 +5,305 @@
 <title>Apps - Unnatel Technologies</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- SEO -->
+<meta name="description" content="Explore applications built by Unnatel Technologies including Unnascan and Unnapack.">
+<meta name="keywords" content="Unnatel Technologies, Unnascan, Unnapack, mobile apps, software solutions">
+<meta name="author" content="Unnatel Technologies">
+
 <style>
-body{
-  margin:0;
-  font-family:'Segoe UI',Arial,sans-serif;
-  background:#f5f7fb;
-  color:#222;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f7fb;
+  color: #222;
   transition: background 0.3s ease, color 0.3s ease;
 }
-.logo-container{
-  display:flex;
-  align-items:center;
-  gap:12px;
+
+/* =========================
+   TOP NAVIGATION BAR
+========================= */
+header {
+  background: linear-gradient(90deg, #0d1b2a, #1b263b);
+  color: #fff;
+  padding: 15px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 40;
 }
 
-.logo{
-  width:48px;
-  height:48px;
-  object-fit:contain;
-  border-radius:10px;
-}
-/* HEADER */
-header{
-  background:linear-gradient(90deg,#0d1b2a,#1b263b);
-  color:#fff;
-  padding:20px 40px;
-  box-shadow:0 2px 10px rgba(0,0,0,.2);
-  position:sticky;
-  top:0;
-  z-index:40;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
-nav a{
-  color:#fff;
-  text-decoration:none;
-  margin-left:20px;
-  font-weight:500;
-  transition:color .3s ease;
+/* Enhanced Logo Styling */
+.logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 4px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 }
 
-nav a:hover{
-  color:#00c6ff;
+/* Large Header Title */
+.brand-name {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
 }
+
+nav div {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00c6ff;
+}
+
 nav a.active {
   color: #00c6ff;
   font-weight: 700;
   border-bottom: 2px solid #00c6ff;
   padding-bottom: 4px;
 }
-  .app-highlight{
-  flex:1 1 420px;
-  max-width:520px;
-  background:white;
-  border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-  padding:30px;
-  display:flex;
-  flex-direction:column;
+
+/* DARK MODE BUTTON */
+.toggle-btn {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #00c6ff);
+  color: #fff;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.app-details{
-  display:flex;
-  flex-direction:column;
-  flex:1;
+.toggle-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #0099ff);
+  transform: scale(1.05);
 }
 
-.app-buttons{
-  margin-top:auto;
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-}
-  .app-details{
-  display:flex;
-  flex-direction:column;
-  flex:1;
-  text-align:justify;
-}
-
-.app-details p,
-.app-details li{
-  text-align:justify;
-  text-justify:inter-word;
-  line-height:1.7;
-}
-/* HERO */
+/* HERO BANNER */
 .hero-banner {
   background: linear-gradient(135deg, #0077ff, #00c6ff);
   color: white;
-  padding: 80px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .hero-banner h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
+  font-size: 2.8em;
+  margin-bottom: 15px;
   font-weight: 700;
 }
 
 .hero-banner p {
-  font-size: 1.2em;
+  font-size: 1.1em;
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;
 }
 
-/* GRID */
-.apps-showcase{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:30px;
-  padding:50px 20px;
-  align-items:stretch;
+/* GRID & SHOWCASE */
+.apps-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+  align-items: stretch;
 }
 
-/* CARD */
-.app-highlight{
-  flex:1 1 420px;
-  max-width:520px;
-  background:white;
-  border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-  padding:30px;
-  display:flex;
-  flex-direction:column;
-  transition:0.3s ease;
+.app-highlight {
+  flex: 1 1 420px;
+  max-width: 520px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
 }
 
-.app-highlight:hover{
-  transform:translateY(-6px);
-  box-shadow:0 15px 40px rgba(0,0,0,0.12);
+.app-highlight:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
 
-/* TOP SECTION */
-.app-header{
-  display:flex;
-  align-items:center;
-  gap:15px;
-  margin-bottom:15px;
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
 }
 
-/* IMAGE */
-.app-header img{
-  width:72px;
-  height:72px;
-  border-radius:14px;
-  object-fit:contain;
-  background:#f1f5ff;
-  padding:6px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.12);
+.app-header img {
+  width: 72px;
+  height: 72px;
+  border-radius: 14px;
+  object-fit: contain;
+  background: #f1f5ff;
+  padding: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
 
-/* TITLE */
-.app-title h2{
-  margin:0;
-  color:#004aad;
-  font-size:22px;
+.app-title h2 {
+  margin: 0;
+  color: #004aad;
+  font-size: 22px;
 }
 
-.app-title span{
-  font-size:13px;
-  color:#666;
+.app-title span {
+  font-size: 13px;
+  color: #666;
 }
 
-/* DESCRIPTION */
-.app-highlight p{
-  line-height:1.6;
-  margin:15px 0;
-  color:#333;
+.app-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: justify;
 }
 
-/* TAGS */
-.tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin:10px 0 15px;
+.app-details p,
+.app-details li {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.7;
 }
 
-.tag{
-  background:#e8f2ff;
-  color:#004aad;
-  padding:5px 10px;
-  border-radius:20px;
-  font-size:12px;
-  font-weight:500;
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 15px;
 }
 
-/* LIST */
-.app-highlight ul{
-  text-align:left;
-  margin:10px 0 0;
-  padding-left:18px;
+.tag {
+  background: #e8f2ff;
+  color: #004aad;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
-.app-highlight ul li{
-  margin-bottom:6px;
+.app-highlight ul {
+  text-align: left;
+  margin: 10px 0 0;
+  padding-left: 18px;
 }
 
-/* BUTTON */
-.app-highlight > a{
-  margin-top:auto;
-  display:inline-block;
-  padding:10px 14px;
-  background:#0077ff;
-  color:white;
+.app-highlight ul li {
+  margin-bottom: 6px;
 }
 
-.app-highlight a:hover{
-  background:#005ed1;
+.app-highlight > a {
+  margin-top: auto;
+  display: inline-block;
+  padding: 10px 14px;
+  background: #0077ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.3s ease;
 }
 
-/* FOOTER */
-footer{
-  background:#004aad;
-  color:white;
-  text-align:center;
-  padding:20px;
-  margin-top:40px;
+.app-highlight a:hover {
+  background: #005ed1;
 }
 
-/* DARK MODE */
-body.dark{
-  background:#121212;
-  color:#e0e0e0;
+footer {
+  background: #004aad;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
 }
 
-.dark .app-highlight{
-  background:#1e1e1e;
-  color:#e0e0e0;
+/* DARK MODE OVERRIDES */
+body.dark {
+  background: #121212;
+  color: #e0e0e0;
 }
 
-.dark .app-title h2{
-  color:#00c6ff;
+body.dark header {
+  background: linear-gradient(90deg, #020617, #1e293b);
 }
 
-.dark .app-title span{
-  color:#aaa;
-}
-
-.dark .tag{
-  background:#2a2a2a;
-  color:#00c6ff;
-}
-
-.dark footer{
-  background:#1f1f1f;
-}
-  .app-buttons{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:25px;
-}
-
-.btn{
-  display:inline-block;
-  padding:12px 24px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:600;
-  transition:.3s;
-}
-
-.btn.primary{
-  background:#007bff;
-  color:#fff;
-}
-
-.btn.primary:hover{
-  opacity:.9;
-}
-
-.btn.secondary{
-  border:2px solid #007bff;
-  color:#007bff;
-  background:transparent;
-}
-
-.btn.secondary:hover{
-  background:#007bff;
-  color:#fff;
-}
-/* DARK BUTTON */
-.toggle-btn{
-  cursor:pointer;
-  padding:8px 16px;
-  border-radius:8px;
-  border:none;
-  background:linear-gradient(135deg,#2563eb,#00c6ff);
-  color:#fff;
-  font-weight:bold;
-  transition:background .3s ease,transform .2s ease;
-}
-
-.toggle-btn:hover{
-  background:linear-gradient(135deg,#1d4ed8,#0099ff);
-  transform:scale(1.05);
-}
-body.dark header{
-  background:linear-gradient(90deg,#020617,#1e293b);
-}
-  body.dark footer{
-  background:#0b1220;
-}
-  /* IMPROVED DARK MODE */
-
-body.dark{
-  background:#121212;
-  color:#e0e0e0;
-}
-
-body.dark .app-highlight{
-  background:#1e1e1e;
-  color:#e0e0e0;
+body.dark .app-highlight {
+  background: #1e1e1e;
+  color: #e0e0e0;
 }
 
 body.dark .app-details,
 body.dark .app-details p,
 body.dark .app-details ul,
-body.dark .app-details li{
-  color:#e0e0e0;
+body.dark .app-details li {
+  color: #e0e0e0;
 }
 
 body.dark .app-details h2,
-body.dark .app-details h3{
-  color:#00c6ff;
+body.dark .app-details h3,
+body.dark .app-title h2 {
+  color: #00c6ff;
 }
 
-body.dark .app-title h2{
-  color:#00c6ff;
+body.dark .app-title span {
+  color: #bdbdbd;
 }
 
-body.dark .app-title span{
-  color:#bdbdbd;
+body.dark .tag {
+  background: #2c2c2c;
+  color: #00c6ff;
 }
 
-body.dark .tag{
-  background:#2c2c2c;
-  color:#00c6ff;
+body.dark .app-header img {
+  background: #2c2c2c;
 }
 
-body.dark .app-header img{
-  background:#2c2c2c;
+body.dark .hero-banner {
+  background: linear-gradient(135deg, #0f172a, #1e40af);
 }
 
-body.dark .btn.secondary{
-  border-color:#00c6ff;
-  color:#00c6ff;
+body.dark footer {
+  background: #0b1220;
 }
 
-body.dark .btn.secondary:hover{
-  background:#00c6ff;
-  color:#121212;
+body.dark a {
+  color: #7dd3fc;
 }
 
-body.dark .hero-banner{
-  background:linear-gradient(135deg,#0f172a,#1e40af);
+body.dark a:hover {
+  color: #38bdf8;
 }
 
-body.dark footer{
-  background:#0b1220;
-}
-
-body.dark a{
-  color:#7dd3fc;
-}
-
-body.dark a:hover{
-  color:#38bdf8;
-}
-  /* =========================
-   MOBILE RESPONSIVE FIX
-========================= */
-@media (max-width:768px){
-  .app-details p,
-  .app-details li{
-    text-align:left;
-  }
-}
+/* MOBILE RESPONSIVE ADAPTABILITY */
 @media (max-width: 768px) {
-
   header {
     padding: 15px 20px;
   }
@@ -400,7 +311,7 @@ body.dark a:hover{
   nav {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 12px;
   }
 
   nav div {
@@ -415,12 +326,21 @@ body.dark a:hover{
     font-size: 14px;
   }
 
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-name {
+    font-size: 1.4rem;
+  }
+
   .toggle-btn {
     width: 100%;
   }
 
   .hero-banner {
-    padding: 50px 15px;
+    padding: 40px 15px;
   }
 
   .hero-banner h1 {
@@ -444,6 +364,11 @@ body.dark a:hover{
     padding: 20px;
   }
 
+  .app-details p,
+  .app-details li {
+    text-align: left;
+  }
+
   .app-header {
     flex-direction: column;
     align-items: flex-start;
@@ -465,10 +390,10 @@ body.dark a:hover{
 
 <header>
   <nav>
-   <div class="logo-container">
-  <img src="assets/images/logounnnatel.png" alt="Unnatel Technologies Logo" class="logo">
-  <strong>Unnatel Technologies</strong>
-</div>
+    <div class="logo-container">
+      <img src="assets/images/logounnnatel.png" alt="Unnatel Technologies Logo" class="logo">
+      <strong class="brand-name">Unnatel Technologies</strong>
+    </div>
 
     <div>
       <button class="toggle-btn" onclick="toggleDark()" id="themeToggle">
@@ -476,7 +401,7 @@ body.dark a:hover{
       </button>
 
       <a href="index.html">Home</a>
-      <a href="apps.html">Apps</a>
+      <a href="apps.html" class="active">Apps</a>
       <a href="privacy-policy.html">Privacy</a>
       <a href="terms.html">Terms</a>
       <a href="contact.html">Contact</a>
@@ -486,16 +411,15 @@ body.dark a:hover{
 
 <!-- HERO -->
 <div class="hero-banner">
-  <h1>Smart Apps by Unnatel</h1>
-  <p>Powerful digital tools for payments, schools, and automation systems built for Kenya’s modern ecosystem.</p>
+  <h1>Our Applications</h1>
+  <p>Discover our suite of innovative software applications designed for businesses, schools, and digital payments.</p>
 </div>
 
-<!-- APPS -->
+<!-- APPS SHOWCASE -->
 <div class="apps-showcase">
 
   <!-- UNNASCAN -->
   <div class="app-highlight">
-
     <div class="app-header">
       <img src="assets/images/logo.png" alt="Unnascan Logo">
       <div class="app-title">
@@ -512,39 +436,35 @@ body.dark a:hover{
     </div>
 
     <section class="app-details">
+      <p>
+        <strong>Unnascan</strong> is an innovative QR-based payment platform designed to simplify and accelerate mobile money transactions between businesses and customers. The system enables merchants to generate unique QR codes linked to their registered mobile numbers, till or paybill numbers, allowing customers to make payments quickly and securely by simply scanning a QR code with their smartphone.
+      </p>
 
+      <p>
+        Unnascan supports phone number-based, till and paybill M-PESA payments, providing a seamless cashless payment experience for both merchants and customers enabling broader payment options for businesses of all sizes.
+      </p>
 
-  <p>
-    <strong>Unnascan</strong> is an innovative QR-based payment platform designed to simplify and accelerate mobile money transactions between businesses and customers. The system enables merchants to generate unique QR codes linked to their registered mobile numbers, till or paybill numbers, allowing customers to make payments quickly and securely by simply scanning a QR code with their smartphone.
-  </p>
+      <h3>Key Features</h3>
+      <ul>
+        <li><strong>Instant QR Code Payments</strong> – Customers can complete transactions within seconds by scanning a merchant's QR code.</li>
+        <li><strong>Real-Time Payment Confirmation</strong> – Both merchants and customers receive immediate transaction status updates.</li>
+        <li><strong>Secure M-PESA Integration</strong> – Payments are processed through trusted M-PESA infrastructure with verification mechanisms.</li>
+        <li><strong>Fast & Convenient Checkout</strong> – Eliminates manual number entry and speeds up customer service.</li>
+        <li><strong>Digital Payment Records</strong> – Maintains accurate transaction records for accountability and business management.</li>
+        <li><strong>Merchants Embedding Wallets To QR Codes</strong> – Merchants embed their business phone numbers, till or paybill numbers to QR codes to receive transaction funds.</li>
+        <li><strong>Print-Ready A4 QR Code Layout</strong> – Every generated QR code is automatically formatted on an A4 page with the business name clearly displayed for easy identification and immediate placement at counters.</li>
+      </ul>
 
-  <p>
-    Unnascan supports phone number-based, till and paybill  M-PESA payments, providing a seamless cashless payment experience for both merchants and customers enabling broader payment options for businesses of all sizes.
-  </p>
+      <p>
+        Unnascan is committed to delivering a secure, efficient, and user-friendly digital payment ecosystem that empowers businesses to accept mobile payments with ease.
+      </p>
+    </section>
 
-  <h3>Key Features</h3>
-  <ul>
-    <li><strong>Instant QR Code Payments</strong> – Customers can complete transactions within seconds by scanning a merchant's QR code.</li>
-    <li><strong>Real-Time Payment Confirmation</strong> – Both merchants and customers receive immediate transaction status updates.</li>
-    <li><strong>Secure M-PESA Integration</strong> – Payments are processed through trusted M-PESA infrastructure with verification mechanisms.</li>
-    <li><strong>Fast & Convenient Checkout</strong> – Eliminates manual number entry and speeds up customer service.</li>
-    <li><strong>Digital Payment Records</strong> – Maintains accurate transaction records for accountability and business management.</li>
-    <li><strong>Merchants Embedding Wallets To QR Codes To Receive Funds</strong> – Merchants embedd their business phone numbers, till or paybill numbers to QR codes to receive transaction funds.</li>
-    <li><strong>Print-Ready A4 QR Code Layout</strong> – Every generated QR code is automatically formatted on an A4 page with the business name clearly displayed for easy identification. The design is ready for immediate printing and strategic placement at checkout counters, tables, entrances, or other customer-facing locations, eliminating the need for additional design work.</li>
-  </ul>
-
-  <p>
-    Unnascan is committed to delivering a secure, efficient, and user-friendly digital payment ecosystem that empowers businesses to accept mobile payments with ease.
-  </p>
-
-
-</section>
     <a href="#">View on Google Play →</a>
   </div>
 
   <!-- UNNAPACK -->
   <div class="app-highlight">
-
     <div class="app-header">
       <img src="assets/images/Unnapack.png" alt="Unnapack Logo">
       <div class="app-title">
@@ -561,40 +481,33 @@ body.dark a:hover{
     </div>
 
     <section class="app-details">
+      <p>
+        <strong>Unnapack</strong> is a comprehensive digital and web-based school management platform designed to streamline and digitize daily school operations. The system brings together student administration, fee management, academic records, staff management, transport coordination, and parent communication into a single integrated solution.
+      </p>
 
+      <p>
+        By automating routine administrative tasks, Unnapack reduces paperwork, improves record accuracy, and enhances communication between schools, parents, teachers, and administrators.
+      </p>
 
-  <p>
-    <strong>Unnapack</strong> is a comprehensive digital and web-based school management platform designed to streamline and digitize daily school operations. The system brings together student administration, fee management, academic records, staff management, transport coordination, and parent communication into a single integrated solution, helping educational institutions operate more efficiently and transparently.
-  </p>
+      <h3>Key Features</h3>
+      <ul>
+        <li><strong>Automated Fee Collection</strong> – Supports seamless school fee payments through M-PESA Paybill integration with automatic payment reconciliation.</li>
+        <li><strong>Instant SMS Notifications & Receipts</strong> – Parents receive real-time payment confirmations, E-receipts through E-mail, and school updates via SMS.</li>
+        <li><strong>Student Information Management</strong> – Maintains comprehensive student records including admissions, attendance, academic performance, and disciplinary history.</li>
+        <li><strong>Examination & Academic Management</strong> – Facilitates exam setup, grading, report card generation, and performance analysis.</li>
+        <li><strong>Staff & Transport Management</strong> – Organizes employee workflows and tracks transport routes, drivers, and student transportation records.</li>
+        <li><strong>Parent & School Communication</strong> – Enhances engagement through timely notifications, announcements, and updates.</li>
+        <li><strong>Digital Operations Dashboard</strong> – Provides real-time insights into finances, student data, and overall school operations.</li>
+      </ul>
 
-  <p>
-    By automating routine administrative tasks, Unnapack reduces paperwork, improves record accuracy, and enhances communication between schools, parents, teachers, and administrators. The platform enables schools to manage finances, monitor student progress, and access critical information in real time through a centralized dashboard.
-  </p>
+      <p>
+        Unnapack empowers schools to embrace digital transformation through a secure, reliable, and scalable platform.
+      </p>
+    </section>
 
-  <h3>Key Features</h3>
-
-  <ul>
-    <li><strong>Automated Fee Collection</strong> – Supports seamless school fee payments through M-PESA Paybill integration with automatic payment reconciliation.</li>
-    <li><strong>Instant SMS Notifications & Receipts</strong> – Parents receive real-time payment confirmations, E-receipts through E-mails and important school updates via SMS.</li>
-    <li><strong>Student Information Management</strong> – Maintains comprehensive student records, including admissions, attendance, academic performance, and disciplinary history.</li>
-    <li><strong>Examination & Academic Management</strong> – Facilitates exam setup, grading, report card generation, and performance analysis.</li>
-    <li><strong>Staff Management</strong> – Organizes employee records, roles, responsibilities, and administrative workflows.</li>
-    <li><strong>School Transport Management</strong> – Tracks transport routes, assigned vehicles, drivers, and student transportation records.</li>
-    <li><strong>Parent & School Communication</strong> – Enhances engagement through timely notifications, announcements, and school updates.</li>
-    <li><strong>Digital Operations Dashboard</strong> – Provides administrators with real-time insights into finances, student data, academic performance, and overall school operations.</li>
-    <li><strong>Centralized Reporting & Analytics</strong> – Generates detailed reports to support informed decision-making and institutional growth.</li>
-  </ul>
-
-  <p>
-    Unnapack empowers schools to embrace digital transformation by providing a secure, reliable, and scalable platform that simplifies administration, improves efficiency, and strengthens collaboration between schools and parents.
-  </p>
-
-
-</section>
     <a href="https://www.facebook.com/unnateltech" target="_blank" rel="noopener noreferrer">
       Learn More →
     </a>
-
   </div>
 
 </div>
@@ -623,18 +536,18 @@ window.onload = function () {
   }
 };
 </script>
-<script>
-const currentPage = window.location.pathname.split("/").pop();
 
+<script>
+const currentPage = window.location.pathname.split("/").pop() || "apps.html";
 const navLinks = document.querySelectorAll("nav a");
 
 navLinks.forEach(link => {
   const linkPage = link.getAttribute("href");
-
   if (linkPage === currentPage) {
     link.classList.add("active");
   }
 });
 </script>
+
 </body>
 </html>
