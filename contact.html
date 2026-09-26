@@ -21,7 +21,7 @@
       transition: background 0.3s ease, color 0.3s ease;
     }
 
-    /* Header / Nav */
+    /* HEADER / NAV - SAME AS INDEX.HTML */
     header {
       background: linear-gradient(90deg, #0d1b2a, #1b263b);
       color: #fff;
@@ -35,11 +35,6 @@
     nav {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-    }
-
-    nav div {
-      display: flex;
       align-items: center;
     }
 
@@ -62,7 +57,7 @@
       padding-bottom: 4px;
     }
 
-    /* --- LOGO & BRAND TITLE STYLES --- */
+    /* LOGO & BRAND - EXACTLY AS INDEX.HTML */
     .logo-container {
       display: flex;
       align-items: center;
@@ -86,7 +81,7 @@
       letter-spacing: 0.5px;
     }
 
-    /* HERO BANNER */
+    /* HERO - SAME AS INDEX.HTML */
     .hero-banner {
       background: linear-gradient(135deg, #0077ff, #00c6ff);
       color: white;
@@ -107,63 +102,102 @@
       line-height: 1.6;
     }
 
-    /* CONTACT SECTION & CARDS */
-    .contact-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin: 50px auto;
+    /* CONTACT CONTENT - INDEX CARD STYLE */
+    .container {
       max-width: 1100px;
-      padding: 0 20px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
     .card {
-      flex: 1 1 240px;
       background: white;
-      border-radius: 18px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
       padding: 30px;
+      margin-top: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
       text-align: center;
-      transition: 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
     }
 
     .card h2 {
-      color: #004aad;
-      margin: 10px 0 15px;
-      font-size: 22px;
+      color: #1b263b;
+      margin-bottom: 15px;
     }
 
     .card p {
       line-height: 1.6;
-      color: #444;
-      margin: 5px 0;
+      margin: 10px 0;
     }
 
     .card a {
+      display: inline-block;
+      margin-top: 15px;
       color: #0077ff;
+      font-weight: bold;
       text-decoration: none;
-      font-weight: 600;
-      transition: color 0.2s ease;
+      transition: color 0.3s ease;
     }
 
     .card a:hover {
-      color: #004aad;
-      text-decoration: underline;
+      color: #00c6ff;
     }
 
     .contact-icon {
       font-size: 42px;
-      color: #0077ff;
       margin-bottom: 10px;
+    }
+
+    /* CONTACT GRID */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    /* FOOTER - SAME AS INDEX.HTML */
+    footer {
+      background: #004aad;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* DARK MODE - SAME AS INDEX.HTML */
+    body.dark {
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    body.dark .card {
+      background: #1e293b;
+      color: #e2e8f0;
+    }
+
+    body.dark .card h2 {
+      color: #00c6ff;
+    }
+
+    body.dark .card a {
+      color: #00c6ff;
+    }
+
+    body.dark header {
+      background: linear-gradient(90deg, #020617, #1e293b);
+    }
+
+    body.dark footer {
+      background: #1f1f1f;
+    }
+
+    body.dark .hero-banner {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      color: #e2e8f0;
     }
 
     .toggle-btn {
@@ -182,51 +216,7 @@
       transform: scale(1.05);
     }
 
-    footer {
-      background: #004aad;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    /* DARK MODE */
-    body.dark {
-      background: #0f172a;
-      color: #e2e8f0;
-    }
-
-    body.dark header {
-      background: linear-gradient(90deg, #020617, #1e293b);
-    }
-
-    body.dark footer {
-      background: #1f1f1f;
-    }
-
-    body.dark .hero-banner {
-      background: linear-gradient(135deg, #1e293b, #0f172a);
-      color: #e2e8f0;
-    }
-
-    body.dark .card {
-      background: #1e293b;
-      color: #e2e8f0;
-    }
-
-    body.dark .card h2 {
-      color: #00c6ff;
-    }
-
-    body.dark .card p {
-      color: #cbd5e1;
-    }
-
-    body.dark .card a {
-      color: #00c6ff;
-    }
-
-    /* MOBILE RESPONSIVE FIX */
+    /* MOBILE - SAME AS INDEX.HTML */
     @media (max-width: 768px) {
       header {
         padding: 15px 20px;
@@ -277,16 +267,17 @@
         font-size: 1em;
       }
 
-      .contact-section {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 15px;
-        margin: 30px auto;
+      .container {
+        padding: 20px 15px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
       }
 
       .card {
-        width: 100%;
-        box-sizing: border-box;
+        padding: 20px;
       }
     }
   </style>
@@ -315,46 +306,86 @@
   </nav>
 </header>
 
-<!-- Hero Banner -->
+<!-- Hero Banner - SAME STYLE AS INDEX.HTML -->
 <div class="hero-banner">
   <h1>Contact Us</h1>
   <p>We are here to support users, partners, and businesses. Reach out anytime — we’ll respond promptly.</p>
 </div>
 
-<!-- Contact Cards -->
-<div class="contact-section">
+<div class="container">
 
-  <div class="card">
-    <div class="contact-icon">📧</div>
-    <h2>Email</h2>
-    <p><a href="mailto:unnatel2021@gmail.com">unnatel2021@gmail.com</a></p>
-    <p>For general inquiries, technical support, or partnership opportunities.</p>
-  </div>
+  <div class="contact-grid">
 
-  <div class="card">
-    <div class="contact-icon">📞</div>
-    <h2>Phone</h2>
-    <p><a href="tel:+254712991811">+254 712 991 811</a> || <a href="tel:+254736163615">+254 736 163 615</a></p>
-    <p>Call us during business hours for immediate assistance.</p>
-  </div>
+    <div class="card">
+      <div class="contact-icon">📧</div>
+      <h2>Email</h2>
+      <p>
+        <a href="mailto:unnatel2021@gmail.com">unnatel2021@gmail.com</a>
+      </p>
+      <p>
+        For general inquiries, technical support, or partnership opportunities.
+      </p>
+    </div>
 
-  <div class="card">
-    <div class="contact-icon">📍</div>
-    <h2>Location</h2>
-    <p>ACK Rd. Street No. 9, HSNo15, Mwiki Estate, Nairobi</p>
-    <p>Pay us a visit for consultations or demonstrations.</p>
-  </div>
+    <div class="card">
+      <div class="contact-icon">📞</div>
+      <h2>Phone</h2>
+      <p>
+        <a href="tel:+254712991811">+254 712 991 811</a>
+        ||
+        <a href="tel:+254736163615">+254 736 163 615</a>
+      </p>
+      <p>
+        Call us during business hours for immediate assistance.
+      </p>
+    </div>
 
-  <div class="card">
-    <div class="contact-icon">🌐</div>
-    <h2>Social Media</h2>
-    <p>
-      <a href="https://www.tiktok.com/@unnateltech" target="_blank" rel="noopener">TikTok</a> |
-      <a href="https://www.facebook.com/unnateltech/" target="_blank" rel="noopener">Facebook</a> |
-      <a href="https://www.linkedin.com/in/unnateltech" target="_blank" rel="noopener">LinkedIn</a> |
-      <a href="https://wa.me/254782223727?text=Hello%20Unnatel%20Technologies" target="_blank" rel="noopener">WhatsApp</a>
-    </p>
-    <p>Follow us for updates, news, and community engagement.</p>
+    <div class="card">
+      <div class="contact-icon">📍</div>
+      <h2>Location</h2>
+      <p>
+        ACK Rd. Street No. 9, HSNo15, Mwiki Estate, Nairobi
+      </p>
+      <p>
+        Pay us a visit for consultations or demonstrations.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="contact-icon">🌐</div>
+      <h2>Social Media</h2>
+
+      <p>
+        <a href="https://www.tiktok.com/@unnateltech"
+           target="_blank"
+           rel="noopener">
+          TikTok
+        </a>
+        |
+        <a href="https://www.facebook.com/unnateltech/"
+           target="_blank"
+           rel="noopener">
+          Facebook
+        </a>
+        |
+        <a href="https://www.linkedin.com/in/unnateltech"
+           target="_blank"
+           rel="noopener">
+          LinkedIn
+        </a>
+        |
+        <a href="https://wa.me/254782223727?text=Hello%20Unnatel%20Technologies"
+           target="_blank"
+           rel="noopener">
+          WhatsApp
+        </a>
+      </p>
+
+      <p>
+        Follow us for updates, news, and community engagement.
+      </p>
+    </div>
+
   </div>
 
 </div>
@@ -363,30 +394,28 @@
   © 2023–2026 Unnatel Technologies. All rights reserved.
 </footer>
 
-<!-- Dark Mode Script -->
+<!-- Dark Mode Script - SAME AS INDEX.HTML -->
 <script>
 function toggleDark() {
   document.body.classList.toggle("dark");
 
   if (document.body.classList.contains("dark")) {
     localStorage.setItem("theme", "dark");
-    document.getElementById("themeToggle").textContent = "Light Mode";
   } else {
     localStorage.setItem("theme", "light");
-    document.getElementById("themeToggle").textContent = "Dark Mode";
   }
 }
 
 window.onload = function () {
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark");
-    document.getElementById("themeToggle").textContent = "Light Mode";
   }
 };
 </script>
 
+<!-- Active Navigation -->
 <script>
-const currentPage = window.location.pathname.split("/").pop() || "contact.html";
+const currentPage = window.location.pathname.split("/").pop();
 
 const navLinks = document.querySelectorAll("nav a");
 
