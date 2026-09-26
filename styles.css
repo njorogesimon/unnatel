@@ -48,9 +48,10 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 2.5em;
+  font-size: 3.5em !important;
   color: #0d1b2a;
   margin-bottom: 15px;
+  font-weight: 700 !important;
 }
 
 .hero p {
@@ -75,6 +76,7 @@ nav a:hover {
 .card h2 {
   color: #1b263b;
   margin-bottom: 15px;
+  font-size: 2.2em !important;
 }
 
 footer {
@@ -128,34 +130,23 @@ body.dark .hero {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-/* 1. Make 'Unnatel Technologies' title larger */
-.hero h1 {
-  font-size: 3.5em; /* Increased from 2.5em */
-  font-weight: 700;
+
+/* --- OVERRIDES TO FORCE TITLE SIZE & IMAGE VISIBILITY --- */
+
+/* 1. Make header / site title larger anywhere it appears */
+h1, .hero h1, nav a:first-child, .site-title, .brand {
+  font-size: 3em !important;
+  font-weight: 800 !important;
 }
 
-/* Make nav logo/brand title larger if present */
-nav a:first-child,
-.site-title,
-.brand {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-/* 2. Image Visibility and Sizing Controls */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Contact / Card section images */
-.card img,
-.container img {
-  width: 100%;
-  max-width: 350px; /* Adjust size as needed */
-  min-width: 150px;  /* Prevents image from being too small */
-  margin: 20px auto;
+/* 2. Force images to be visible and properly sized */
+img, .card img, .container img, article img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  max-width: 500px !important; /* Adjust if you want larger/smaller */
+  height: auto !important;
+  margin: 20px auto !important;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
 }
