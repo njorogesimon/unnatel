@@ -6,10 +6,11 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* HEADER & NAVBAR ADJUSTMENTS */
 header {
   background: linear-gradient(90deg, #0d1b2a, #1b263b);
   color: white;
-  padding: 20px 40px;
+  padding: 15px 40px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
@@ -17,6 +18,33 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Brand container grouping image and title */
+.brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+  text-decoration: none !important;
+}
+
+/* Top Title Bar Image/Logo */
+.brand img, nav img {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: 60px !important; /* Increased height for high visibility */
+  width: auto !important;
+  max-width: 200px !important;
+  object-fit: contain !important;
+}
+
+/* Top Title Bar Text */
+.brand-title, nav a:first-child, .brand span {
+  font-size: 2.2em !important; /* Made significantly larger */
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  letter-spacing: 0.5px;
 }
 
 nav a {
@@ -48,10 +76,9 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 3.5em !important;
+  font-size: 2.5em;
   color: #0d1b2a;
   margin-bottom: 15px;
-  font-weight: 700 !important;
 }
 
 .hero p {
@@ -76,7 +103,6 @@ nav a:hover {
 .card h2 {
   color: #1b263b;
   margin-bottom: 15px;
-  font-size: 2.2em !important;
 }
 
 footer {
@@ -131,22 +157,11 @@ body.dark .hero {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- OVERRIDES TO FORCE TITLE SIZE & IMAGE VISIBILITY --- */
-
-/* 1. Make header / site title larger anywhere it appears */
-h1, .hero h1, nav a:first-child, .site-title, .brand {
-  font-size: 3em !important;
-  font-weight: 800 !important;
-}
-
-/* 2. Force images to be visible and properly sized */
-img, .card img, .container img, article img {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  width: 100% !important;
-  max-width: 500px !important; /* Adjust if you want larger/smaller */
-  height: auto !important;
-  margin: 20px auto !important;
+/* General Page Images */
+.card img, .container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
   border-radius: 12px;
 }
