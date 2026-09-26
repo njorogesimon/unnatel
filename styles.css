@@ -6,7 +6,6 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* HEADER & NAVBAR ADJUSTMENTS */
 header {
   background: linear-gradient(90deg, #0d1b2a, #1b263b);
   color: white;
@@ -15,36 +14,36 @@ header {
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
 }
 
-/* Brand container grouping image and title */
-.brand {
+/* --- BRAND CONTAINER (SIDE-BY-SIDE LAYOUT) --- */
+.brand, header nav a:first-child {
   display: flex !important;
   align-items: center !important;
-  gap: 15px !important;
+  gap: 15px !important;            /* Space between logo image and text */
   text-decoration: none !important;
 }
 
-/* Top Title Bar Image/Logo */
-.brand img, nav img {
+/* Top Header Logo Image */
+.brand img, header nav img {
   display: inline-block !important;
   visibility: visible !important;
   opacity: 1 !important;
-  height: 60px !important; /* Increased height for high visibility */
+  height: 70px !important;          /* Adjust height to make image bigger */
   width: auto !important;
-  max-width: 200px !important;
+  max-width: 250px !important;
   object-fit: contain !important;
 }
 
-/* Top Title Bar Text */
-.brand-title, nav a:first-child, .brand span {
-  font-size: 2.2em !important; /* Made significantly larger */
+/* Top Header Title Text ("Unnatel Technologies") */
+.brand span, .brand, header nav a:first-child {
+  font-size: 2.4em !important;      /* Makes title name significantly bigger */
   font-weight: 800 !important;
   color: #ffffff !important;
-  letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 nav a {
@@ -76,7 +75,7 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 2.5em;
+  font-size: 2.8em;
   color: #0d1b2a;
   margin-bottom: 15px;
 }
@@ -151,13 +150,12 @@ body.dark .hero {
   transform: scale(1.05);
 }
 
-/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* General Page Images */
+/* Content Page Images */
 .card img, .container img {
   max-width: 100%;
   height: auto;
