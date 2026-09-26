@@ -1,389 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Apps - Unnatel Technologies</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Apps - Unnatel Technologies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- SEO -->
-<meta name="description" content="Explore applications built by Unnatel Technologies including Unnascan and Unnapack.">
-<meta name="keywords" content="Unnatel Technologies, Unnascan, Unnapack, mobile apps, software solutions">
-<meta name="author" content="Unnatel Technologies">
+  <!-- SEO -->
+  <meta name="description" content="Explore applications built by Unnatel Technologies including Unnascan and Unnapack.">
+  <meta name="keywords" content="Unnatel Technologies, Unnascan, Unnapack, mobile apps, software solutions">
+  <meta name="author" content="Unnatel Technologies">
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f5f7fb;
-  color: #222;
-  transition: background 0.3s ease, color 0.3s ease;
-}
+  <link rel="stylesheet" href="styles.css">
 
-/* =========================
-   TOP NAVIGATION BAR
-========================= */
-header {
-  background: linear-gradient(90deg, #0d1b2a, #1b263b);
-  color: #fff;
-  padding: 15px 40px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  position: sticky;
-  top: 0;
-  z-index: 40;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    /* Header / Nav */
+    header {
+      background: linear-gradient(90deg, #0d1b2a, #1b263b);
+      color: #fff;
+      padding: 15px 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.2);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
+    nav div {
+      display: flex;
+      align-items: center;
+    }
 
-/* Enhanced Logo Styling */
-.logo {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-  border-radius: 12px;
-  background: #ffffff;
-  padding: 4px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-}
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color .3s ease;
+    }
 
-/* Large Header Title */
-.brand-name {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #ffffff;
-  letter-spacing: 0.5px;
-}
+    nav a:hover {
+      color: #00c6ff;
+    }
 
-nav div {
-  display: flex;
-  align-items: center;
-}
+    /* --- LOGO & BRAND TITLE STYLES --- */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
+    .logo {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
 
-nav a:hover {
-  color: #00c6ff;
-}
+    .brand-name {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+    }
 
-nav a.active {
-  color: #00c6ff;
-  font-weight: 700;
-  border-bottom: 2px solid #00c6ff;
-  padding-bottom: 4px;
-}
+    .hero-banner {
+      background: linear-gradient(135deg, #0077ff, #00c6ff);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
 
-/* DARK MODE BUTTON */
-.toggle-btn {
-  cursor: pointer;
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: none;
-  background: linear-gradient(135deg, #2563eb, #00c6ff);
-  color: #fff;
-  font-weight: bold;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
+    .hero-banner h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
 
-.toggle-btn:hover {
-  background: linear-gradient(135deg, #1d4ed8, #0099ff);
-  transform: scale(1.05);
-}
+    .hero-banner p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
 
-/* HERO BANNER */
-.hero-banner {
-  background: linear-gradient(135deg, #0077ff, #00c6ff);
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-}
+    nav a.active {
+      color: #00c6ff;
+      font-weight: 700;
+      border-bottom: 2px solid #00c6ff;
+      padding-bottom: 4px;
+    }
 
-.hero-banner h1 {
-  font-size: 2.8em;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
+    /* GRID & SHOWCASE */
+    .apps-showcase {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px 20px;
+      align-items: stretch;
+    }
 
-.hero-banner p {
-  font-size: 1.1em;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
+    .app-highlight {
+      flex: 1 1 420px;
+      max-width: 520px;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      transition: 0.3s ease;
+    }
 
-/* GRID & SHOWCASE */
-.apps-showcase {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding: 50px 20px;
-  align-items: stretch;
-}
+    .app-highlight:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
 
-.app-highlight {
-  flex: 1 1 420px;
-  max-width: 520px;
-  background: white;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  transition: 0.3s ease;
-}
+    .app-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
 
-.app-highlight:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-}
+    .app-header img {
+      width: 72px;
+      height: 72px;
+      border-radius: 14px;
+      object-fit: contain;
+      background: #f1f5ff;
+      padding: 6px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    }
 
-.app-header {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 15px;
-}
+    .app-title h2 {
+      margin: 0;
+      color: #004aad;
+      font-size: 22px;
+    }
 
-.app-header img {
-  width: 72px;
-  height: 72px;
-  border-radius: 14px;
-  object-fit: contain;
-  background: #f1f5ff;
-  padding: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-}
+    .app-title span {
+      font-size: 13px;
+      color: #666;
+    }
 
-.app-title h2 {
-  margin: 0;
-  color: #004aad;
-  font-size: 22px;
-}
+    .app-details {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      text-align: justify;
+    }
 
-.app-title span {
-  font-size: 13px;
-  color: #666;
-}
+    .app-details p,
+    .app-details li {
+      text-align: justify;
+      text-justify: inter-word;
+      line-height: 1.7;
+    }
 
-.app-details {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  text-align: justify;
-}
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 15px;
+    }
 
-.app-details p,
-.app-details li {
-  text-align: justify;
-  text-justify: inter-word;
-  line-height: 1.7;
-}
+    .tag {
+      background: #e8f2ff;
+      color: #004aad;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+    }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 10px 0 15px;
-}
+    .app-highlight ul {
+      text-align: left;
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
 
-.tag {
-  background: #e8f2ff;
-  color: #004aad;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 500;
-}
+    .app-highlight ul li {
+      margin-bottom: 6px;
+    }
 
-.app-highlight ul {
-  text-align: left;
-  margin: 10px 0 0;
-  padding-left: 18px;
-}
+    .app-highlight > a {
+      margin-top: auto;
+      display: inline-block;
+      padding: 10px 14px;
+      background: #0077ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
 
-.app-highlight ul li {
-  margin-bottom: 6px;
-}
+    .app-highlight a:hover {
+      background: #005ed1;
+    }
 
-.app-highlight > a {
-  margin-top: auto;
-  display: inline-block;
-  padding: 10px 14px;
-  background: #0077ff;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  text-align: center;
-  transition: background 0.3s ease;
-}
+    footer {
+      background: #004aad;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
 
-.app-highlight a:hover {
-  background: #005ed1;
-}
+    /* DARK MODE */
+    body.dark {
+      background: #0f172a;
+      color: #e2e8f0;
+    }
 
-footer {
-  background: #004aad;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
+    body.dark header {
+      background: linear-gradient(90deg, #020617, #1e293b);
+    }
 
-/* DARK MODE OVERRIDES */
-body.dark {
-  background: #121212;
-  color: #e0e0e0;
-}
+    body.dark footer {
+      background: #1f1f1f;
+    }
 
-body.dark header {
-  background: linear-gradient(90deg, #020617, #1e293b);
-}
+    body.dark .hero-banner {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      color: #e2e8f0;
+    }
 
-body.dark .app-highlight {
-  background: #1e1e1e;
-  color: #e0e0e0;
-}
+    body.dark .app-highlight {
+      background: #1e293b;
+      color: #e2e8f0;
+    }
 
-body.dark .app-details,
-body.dark .app-details p,
-body.dark .app-details ul,
-body.dark .app-details li {
-  color: #e0e0e0;
-}
+    body.dark .app-details,
+    body.dark .app-details p,
+    body.dark .app-details ul,
+    body.dark .app-details li {
+      color: #e2e8f0;
+    }
 
-body.dark .app-details h2,
-body.dark .app-details h3,
-body.dark .app-title h2 {
-  color: #00c6ff;
-}
+    body.dark .app-details h2,
+    body.dark .app-details h3,
+    body.dark .app-title h2 {
+      color: #00c6ff;
+    }
 
-body.dark .app-title span {
-  color: #bdbdbd;
-}
+    body.dark .app-title span {
+      color: #94a3b8;
+    }
 
-body.dark .tag {
-  background: #2c2c2c;
-  color: #00c6ff;
-}
+    body.dark .tag {
+      background: #334155;
+      color: #00c6ff;
+    }
 
-body.dark .app-header img {
-  background: #2c2c2c;
-}
+    body.dark .app-header img {
+      background: #334155;
+    }
 
-body.dark .hero-banner {
-  background: linear-gradient(135deg, #0f172a, #1e40af);
-}
+    .toggle-btn {
+      cursor: pointer;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: none;
+      background: linear-gradient(135deg, #2563eb, #00c6ff);
+      color: #fff;
+      font-weight: bold;
+      transition: background .3s ease, transform .2s ease;
+    }
 
-body.dark footer {
-  background: #0b1220;
-}
+    .toggle-btn:hover {
+      background: linear-gradient(135deg, #1d4ed8, #0099ff);
+      transform: scale(1.05);
+    }
 
-body.dark a {
-  color: #7dd3fc;
-}
+    /* MOBILE RESPONSIVE FIX */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
 
-body.dark a:hover {
-  color: #38bdf8;
-}
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
 
-/* MOBILE RESPONSIVE ADAPTABILITY */
-@media (max-width: 768px) {
-  header {
-    padding: 15px 20px;
-  }
+      nav div {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
 
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
+      nav a {
+        margin-left: 0;
+        font-size: 14px;
+      }
 
-  nav div {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+      .logo {
+        width: 50px;
+        height: 50px;
+      }
 
-  nav a {
-    margin-left: 0;
-    font-size: 14px;
-  }
+      .brand-name {
+        font-size: 1.5rem;
+      }
 
-  .logo {
-    width: 48px;
-    height: 48px;
-  }
+      .toggle-btn {
+        width: 100%;
+        text-align: center;
+      }
 
-  .brand-name {
-    font-size: 1.4rem;
-  }
+      .hero-banner {
+        padding: 50px 15px;
+      }
 
-  .toggle-btn {
-    width: 100%;
-  }
+      .hero-banner h1 {
+        font-size: 1.8em;
+        line-height: 1.2;
+      }
 
-  .hero-banner {
-    padding: 40px 15px;
-  }
+      .hero-banner p {
+        font-size: 1em;
+      }
 
-  .hero-banner h1 {
-    font-size: 1.8em;
-    line-height: 1.2;
-  }
+      .apps-showcase {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 15px;
+      }
 
-  .hero-banner p {
-    font-size: 1em;
-  }
+      .app-highlight {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+      }
 
-  .apps-showcase {
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 15px;
-  }
+      .app-details p,
+      .app-details li {
+        text-align: left;
+      }
 
-  .app-highlight {
-    width: 100%;
-    max-width: 100%;
-    padding: 20px;
-  }
+      .app-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-  .app-details p,
-  .app-details li {
-    text-align: left;
-  }
+      .app-header img {
+        width: 60px;
+        height: 60px;
+      }
 
-  .app-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .app-header img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .app-title h2 {
-    font-size: 20px;
-  }
-}
-</style>
+      .app-title h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -409,7 +399,7 @@ body.dark a:hover {
   </nav>
 </header>
 
-<!-- HERO -->
+<!-- Hero Banner -->
 <div class="hero-banner">
   <h1>Our Applications</h1>
   <p>Discover our suite of innovative software applications designed for businesses, schools, and digital payments.</p>
@@ -516,38 +506,34 @@ body.dark a:hover {
   © 2023–2026 Unnatel Technologies. All rights reserved.
 </footer>
 
+<!-- Dark Mode Script -->
 <script>
 function toggleDark() {
   document.body.classList.toggle("dark");
-
   if (document.body.classList.contains("dark")) {
     localStorage.setItem("theme", "dark");
-    document.getElementById("themeToggle").textContent = "Light Mode";
   } else {
     localStorage.setItem("theme", "light");
-    document.getElementById("themeToggle").textContent = "Dark Mode";
   }
 }
-
 window.onload = function () {
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark");
-    document.getElementById("themeToggle").textContent = "Light Mode";
   }
 };
 </script>
-
 <script>
 const currentPage = window.location.pathname.split("/").pop() || "apps.html";
+
 const navLinks = document.querySelectorAll("nav a");
 
 navLinks.forEach(link => {
   const linkPage = link.getAttribute("href");
+
   if (linkPage === currentPage) {
     link.classList.add("active");
   }
 });
 </script>
-
 </body>
 </html>
