@@ -99,20 +99,22 @@ header nav a:first-child {
 }
 
 
+```css
 /* ---------- NAVIGATION LINKS ---------- */
 
 nav > div,
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: flex-end;
+  gap: 4px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin-left: 12px;
-  padding: 8px 10px;
+  margin-left: 0;
+  padding: 8px 9px;
   font-size: 0.95rem;
   font-weight: 500;
   border-radius: 7px;
@@ -125,6 +127,7 @@ nav a:hover {
   color: #00c6ff;
   background: rgba(255, 255, 255, 0.06);
 }
+```
 
 
 /* ---------- MAIN CONTAINER ---------- */
