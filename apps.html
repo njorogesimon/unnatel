@@ -1,184 +1,429 @@
-```css
-/* =========================================================
-   APPLICATION SHOWCASE
-   ========================================================= */
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
-.apps-showcase {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-  margin-top: 10px;
-}
+  <title>Apps | Unnatel Technologies</title>
 
-.app-highlight {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 30px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-  border: 1px solid rgba(15, 23, 42, 0.05);
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  display: flex;
-  flex-direction: column;
+  <!-- SEO -->
+  <meta
+    name="description"
+    content="Explore applications built by Unnatel Technologies, including Unnascan and Unnapack."
+  >
+  <meta
+    name="keywords"
+    content="Unnatel Technologies, Unnascan, Unnapack, mobile apps, software solutions, M-Pesa, school management system"
+  >
+  <meta name="author" content="Unnatel Technologies">
 
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-.app-highlight:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
-}
+<body>
 
-.app-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 18px;
-}
+<header>
+  <nav>
 
-.app-header img {
-  width: 72px;
-  height: 72px;
-  object-fit: contain;
-  border-radius: 15px;
-  background: #f1f5ff;
-  padding: 7px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
-}
+    <!-- Brand -->
+    <div class="logo-container">
 
-.app-title h2 {
-  margin: 0 0 4px;
-  color: #1b263b;
-  font-size: 1.45rem;
-}
+      <a href="index.html" aria-label="Unnatel Technologies Home">
+        <img
+          src="assets/images/logounnatel.png"
+          alt="Unnatel Technologies Logo"
+          class="logo"
+        >
+      </a>
 
-.app-title span {
-  color: #64748b;
-  font-size: 0.88rem;
-}
+      <strong class="brand-name">
+        Unnatel Technologies
+      </strong>
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 2px 0 20px;
-}
+    </div>
 
-.tag {
-  background: #e8f2ff;
-  color: #1d4ed8;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-}
+    <!-- Navigation -->
+    <div class="nav-links">
 
-.app-details {
-  flex: 1;
-}
+      <button
+        class="toggle-btn"
+        onclick="toggleDark()"
+        id="themeToggle"
+        type="button"
+        aria-label="Toggle dark mode"
+      >
+        Dark Mode
+      </button>
 
-.app-details p {
-  line-height: 1.7;
-}
+      <a href="index.html">Home</a>
+      <a href="apps.html">Apps</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
 
-.app-details h3 {
-  margin-top: 25px;
-  margin-bottom: 10px;
-  color: #1b263b;
-}
+    </div>
 
-.app-details ul {
-  padding-left: 20px;
-}
-
-.app-details li {
-  margin-bottom: 9px;
-  line-height: 1.6;
-}
-
-.app-action {
-  display: inline-block;
-  margin-top: 22px;
-  padding: 10px 16px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #2563eb, #00c6ff);
-  color: #ffffff !important;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none !important;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.app-action:hover {
-  color: #ffffff !important;
-  transform: translateY(-1px);
-  box-shadow: 0 5px 14px rgba(37, 99, 235, 0.25);
-}
+  </nav>
+</header>
 
 
-/* ---------- DARK MODE ---------- */
+<!-- =====================================================
+     HERO
+     ===================================================== -->
 
-body.dark .app-highlight {
-  background: #1e293b;
-  color: #e2e8f0;
-  border-color: rgba(148, 163, 184, 0.12);
-}
+<section class="hero-banner">
 
-body.dark .app-title h2,
-body.dark .app-details h3 {
-  color: #f1f5f9;
-}
+  <div class="container">
 
-body.dark .app-title span {
-  color: #94a3b8;
-}
+    <h1>Our Applications</h1>
 
-body.dark .app-header img {
-  background: #334155;
-}
+    <p>
+      Explore software solutions built by Unnatel Technologies
+      to simplify payments, business operations, and digital management.
+    </p>
 
-body.dark .tag {
-  background: #334155;
-  color: #38bdf8;
-}
+  </div>
+
+</section>
 
 
-/* ---------- MOBILE ---------- */
+<!-- =====================================================
+     APPLICATIONS
+     ===================================================== -->
 
-@media (max-width: 850px) {
+<main class="container">
 
-  .apps-showcase {
-    grid-template-columns: 1fr;
+  <section class="apps-showcase">
+
+
+    <!-- =================================================
+         UNNASCAN
+         ================================================= -->
+
+    <article class="app-highlight">
+
+      <div class="app-header">
+
+        <img
+          src="assets/images/logo.png"
+          alt="Unnascan Logo"
+        >
+
+        <div class="app-title">
+
+          <h2>Unnascan</h2>
+
+          <span>
+            QR Payments &amp; M-PESA Integration
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- Product Tags -->
+
+      <div class="tags">
+
+        <span class="tag">QR Payments</span>
+        <span class="tag">M-PESA</span>
+        <span class="tag">Fast Checkout</span>
+        <span class="tag">Secure</span>
+
+      </div>
+
+
+      <!-- Product Details -->
+
+      <div class="app-details">
+
+        <p>
+          <strong>Unnascan</strong> is an innovative QR-based payment
+          platform designed to simplify and accelerate mobile money
+          transactions between businesses and customers. The system enables
+          merchants to generate unique QR codes linked to their registered
+          mobile numbers, till or paybill numbers, allowing customers to make
+          payments quickly and securely by simply scanning a QR code with
+          their smartphone.
+        </p>
+
+        <p>
+          Unnascan supports phone number-based, till and paybill M-PESA
+          payments, providing a seamless cashless payment experience for
+          both merchants and customers, enabling broader payment options
+          for businesses of all sizes.
+        </p>
+
+
+        <h3>Key Features</h3>
+
+        <ul>
+
+          <li>
+            <strong>Instant QR Code Payments</strong> – Customers can
+            complete transactions within seconds by scanning a merchant's
+            QR code.
+          </li>
+
+          <li>
+            <strong>Real-Time Payment Confirmation</strong> – Both merchants
+            and customers receive immediate transaction status updates.
+          </li>
+
+          <li>
+            <strong>Secure M-PESA Integration</strong> – Payments are
+            processed through trusted M-PESA infrastructure with verification
+            mechanisms.
+          </li>
+
+          <li>
+            <strong>Fast &amp; Convenient Checkout</strong> – Eliminates
+            manual number entry and speeds up customer service.
+          </li>
+
+          <li>
+            <strong>Digital Payment Records</strong> – Maintains accurate
+            transaction records for accountability and business management.
+          </li>
+
+          <li>
+            <strong>Merchants Embedding Wallets To QR Codes</strong> –
+            Merchants embed their business phone numbers, till or paybill
+            numbers into QR codes to receive transaction funds.
+          </li>
+
+          <li>
+            <strong>Print-Ready A4 QR Code Layout</strong> – Every generated
+            QR code is automatically formatted on an A4 page with the
+            business name clearly displayed for easy identification and
+            immediate placement at counters.
+          </li>
+
+        </ul>
+
+
+        <p>
+          Unnascan is committed to delivering a secure, efficient, and
+          user-friendly digital payment ecosystem that empowers businesses
+          to accept mobile payments with ease.
+        </p>
+
+      </div>
+
+
+      <!-- App Action -->
+
+      <a
+        href="#"
+        class="app-action"
+        aria-label="View Unnascan on Google Play"
+      >
+        View on Google Play →
+      </a>
+
+    </article>
+
+
+    <!-- =================================================
+         UNNAPACK
+         ================================================= -->
+
+    <article class="app-highlight">
+
+      <div class="app-header">
+
+        <img
+          src="assets/images/Unnapack.png"
+          alt="Unnapack Logo"
+        >
+
+        <div class="app-title">
+
+          <h2>Unnapack</h2>
+
+          <span>
+            Smart School Management System
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- Product Tags -->
+
+      <div class="tags">
+
+        <span class="tag">School ERP</span>
+        <span class="tag">Fees System</span>
+        <span class="tag">SMS Alerts</span>
+        <span class="tag">Automation</span>
+
+      </div>
+
+
+      <!-- Product Details -->
+
+      <div class="app-details">
+
+        <p>
+          <strong>Unnapack</strong> is a comprehensive digital and web-based
+          school management platform designed to streamline and digitize
+          daily school operations. The system brings together student
+          administration, fee management, academic records, staff management,
+          transport coordination, and parent communication into a single
+          integrated solution.
+        </p>
+
+        <p>
+          By automating routine administrative tasks, Unnapack reduces
+          paperwork, improves record accuracy, and enhances communication
+          between schools, parents, teachers, and administrators.
+        </p>
+
+
+        <h3>Key Features</h3>
+
+        <ul>
+
+          <li>
+            <strong>Automated Fee Collection</strong> – Supports seamless
+            school fee payments through M-PESA Paybill integration with
+            automatic payment reconciliation.
+          </li>
+
+          <li>
+            <strong>Instant SMS Notifications &amp; Receipts</strong> –
+            Parents receive real-time payment confirmations, e-receipts
+            through email, and school updates via SMS.
+          </li>
+
+          <li>
+            <strong>Student Information Management</strong> – Maintains
+            comprehensive student records including admissions, attendance,
+            academic performance, and disciplinary history.
+          </li>
+
+          <li>
+            <strong>Examination &amp; Academic Management</strong> –
+            Facilitates exam setup, grading, report card generation, and
+            performance analysis.
+          </li>
+
+          <li>
+            <strong>Staff &amp; Transport Management</strong> – Organizes
+            employee workflows and tracks transport routes, drivers, and
+            student transportation records.
+          </li>
+
+          <li>
+            <strong>Parent &amp; School Communication</strong> – Enhances
+            engagement through timely notifications, announcements, and
+            updates.
+          </li>
+
+          <li>
+            <strong>Digital Operations Dashboard</strong> – Provides
+            real-time insights into finances, student data, and overall
+            school operations.
+          </li>
+
+        </ul>
+
+
+        <p>
+          Unnapack empowers schools to embrace digital transformation
+          through a secure, reliable, and scalable platform.
+        </p>
+
+      </div>
+
+
+      <!-- App Action -->
+
+      <a
+        href="https://www.facebook.com/unnateltech"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="app-action"
+        aria-label="Learn more about Unnapack"
+      >
+        Learn More →
+      </a>
+
+    </article>
+
+  </section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+  © 2023–2026 Unnatel Technologies. All rights reserved.
+</footer>
+
+
+<!-- =====================================================
+     DARK MODE + ACTIVE NAVIGATION
+     ===================================================== -->
+
+<script>
+
+function toggleDark() {
+
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+
+    localStorage.setItem("theme", "dark");
+
+  } else {
+
+    localStorage.setItem("theme", "light");
+
   }
 
-  .app-highlight {
-    padding: 24px;
-  }
-
 }
 
 
-@media (max-width: 520px) {
+window.addEventListener("DOMContentLoaded", function () {
 
-  .app-header {
-    align-items: flex-start;
+  /* Restore saved theme */
+
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
   }
 
-  .app-header img {
-    width: 62px;
-    height: 62px;
-  }
 
-  .app-title h2 {
-    font-size: 1.25rem;
-  }
+  /* Highlight current page */
 
-  .app-details li {
-    line-height: 1.55;
-  }
+  const currentPage =
+    window.location.pathname.split("/").pop() || "apps.html";
 
-}
+  const navLinks = document.querySelectorAll("nav a");
+
+  navLinks.forEach(function (link) {
+
+    const linkPage = link.getAttribute("href");
+
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+
+  });
+
+});
+
+</script>
+
+</body>
+</html>
 ```
