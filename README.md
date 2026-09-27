@@ -12,7 +12,7 @@ It also provides a publicly accessible policy URL for app-store and platform com
 
 The current Privacy Policy is available here:
 
-**https://njorogesimon.github.io/unnatel-privacy-policy/**
+**https://njorogesimon.github.io/unnatel/privacy-policy.html**
 
 ## Apps Covered
 
