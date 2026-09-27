@@ -13,10 +13,12 @@
     name="description"
     content="Unnatel Technologies is a Kenya-based software development company building mobile applications, web systems, APIs, payment solutions, and custom digital platforms."
   >
+
   <meta
     name="keywords"
     content="Unnatel Technologies, software development Kenya, mobile apps Kenya, web applications Kenya, Flutter, .NET, M-Pesa, Daraja"
   >
+
   <meta name="author" content="Unnatel Technologies">
 
   <!-- Styles -->
@@ -29,21 +31,21 @@
   <nav>
 
     <!-- Brand -->
-    <div class="logo-container">
+    <a
+      href="index.html"
+      class="brand"
+      aria-label="Unnatel Technologies Home"
+    >
+      <img
+        src="assets/images/logounnatel.png"
+        alt="Unnatel Technologies Logo"
+      >
 
-      <a href="index.html" aria-label="Unnatel Technologies Home">
-        <img
-          src="assets/images/logounnatel.png"
-          alt="Unnatel Technologies Logo"
-          class="logo"
-        >
-      </a>
-
-      <strong class="brand-name">
+      <span>
         Unnatel Technologies
-      </strong>
+      </span>
+    </a>
 
-    </div>
 
     <!-- Navigation -->
     <div class="nav-links">
@@ -74,7 +76,7 @@
      HERO
      ===================================================== -->
 
-<section class="hero-banner">
+<section class="hero">
 
   <div class="container">
 
@@ -240,7 +242,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const currentPage =
     window.location.pathname.split("/").pop() || "index.html";
 
-  const navLinks = document.querySelectorAll("nav a");
+  const navLinks = document.querySelectorAll(".nav-links a");
 
   navLinks.forEach(function (link) {
 
