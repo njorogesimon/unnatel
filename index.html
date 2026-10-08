@@ -250,6 +250,32 @@
       .card {
         padding: 20px;
       }
+      .services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-list li {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 15px;
+  margin-bottom: 12px;
+  align-items: start;
+}
+
+.services-list strong {
+  font-weight: 600;
+}
+
+.services-list span {
+  text-align: justify;
+}
+
+.services-list span::before {
+  content: "— ";
+  color: #666;
+}
     }
   </style>
 </head>
