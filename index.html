@@ -191,34 +191,7 @@
       background: linear-gradient(135deg, #1d4ed8, #0099ff);
       transform: scale(1.05);
     }
-.services-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 
-.services-list li {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 15px;
-  margin-bottom: 14px;
-  align-items: start;
-}
-
-.services-list strong {
-  font-weight: 700;
-  color: #1b263b;
-}
-
-.services-list span {
-  text-align: justify;
-  line-height: 1.6;
-}
-
-.services-list span::before {
-  content: "— ";
-  color: #666;
-}
     /* MOBILE RESPONSIVE FIX */
     @media (max-width: 768px) {
       header {
@@ -282,35 +255,54 @@
   padding: 0;
   margin: 0;
 }
-
-.services-list li {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 15px;
-  margin-bottom: 12px;
-  align-items: start;
+      .services-list li {
+  flex-direction: column;
+  gap: 4px;
 }
 
 .services-list strong {
-  font-weight: 600;
+  min-width: auto;
+}
+
+.services-list span::before {
+  content: "";
+}
+``
+
+/* SERVICES LIST */
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+.services-list strong {
+  min-width: 170px;
+  font-weight: 700;
+  color: #1b263b;
 }
 
 .services-list span {
-  text-align: justify;
+  flex: 1;
+  text-align: left;
 }
 
 .services-list span::before {
   content: "— ";
   color: #666;
 }
-      .services-list li {
-  grid-template-columns: 1fr;
-  gap: 5px;
+
+body.dark .services-list strong {
+  color: #ffffff;
 }
 
-.services-list span::before {
-  content: "";
-}
     }
   </style>
 </head>
