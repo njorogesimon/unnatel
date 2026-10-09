@@ -382,7 +382,7 @@ window.onload = function () {
 </script>
 
 <script>
-const currentPage = window.location.pathname.split("/").pop() || "contact.html";
+const currentPage = window.location.pathname.split("/").pop();
 
 const navLinks = document.querySelectorAll("nav a");
 
@@ -394,6 +394,43 @@ navLinks.forEach(link => {
   }
 });
 </script>
+  ```html
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".toggle-btn");
+
+  if (!toggle) return;
+
+  // Restore the user's saved preference
+  const savedTheme = localStorage.getItem("unnatel-theme");
+
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+  }
+
+  // Keep the button label in sync with the current theme
+  function updateToggleLabel() {
+    toggle.textContent = document.body.classList.contains("dark")
+      ? "☀️ Light Mode"
+      : "🌙 Dark Mode";
+  }
+
+  updateToggleLabel();
+
+  // Toggle between light and dark mode
+  toggle.addEventListener("click", function () {
+    const isDark = document.body.classList.toggle("dark");
+
+    localStorage.setItem(
+      "unnatel-theme",
+      isDark ? "dark" : "light"
+    );
+
+    updateToggleLabel();
+  });
+});
+</script>
+```
 
 </body>
 </html>
