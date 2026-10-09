@@ -301,6 +301,74 @@
       background: linear-gradient(135deg, #1e293b, #0f172a);
       color: #e2e8f0;
     }
+    /* ====================================
+   DARK MODE FIXES
+   ==================================== */
+
+body.dark .stat-card {
+  background: #1e293b;
+  color: #e2e8f0;
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+
+body.dark .stat-card h2 {
+  color: #38bdf8;
+}
+
+body.dark .stat-card p {
+  color: #cbd5e1;
+}
+
+body.dark .service-box {
+  background: #1e293b;
+  color: #e2e8f0;
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+body.dark .service-box h3 {
+  color: #ffffff;
+}
+
+body.dark .service-box p {
+  color: #cbd5e1;
+}
+
+body.dark .hero-badge {
+  background: rgba(255,255,255,.08);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,.15);
+}
+
+body.dark .btn-primary {
+  background: linear-gradient(
+    135deg,
+    #0ea5e9,
+    #38bdf8
+  );
+}
+
+body.dark .btn-secondary {
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,.25);
+  background: rgba(255,255,255,.04);
+}
+
+body.dark .btn-secondary:hover {
+  background: rgba(255,255,255,.08);
+}
+
+body.dark .card h2 {
+  color: #ffffff;
+}
+
+body.dark .card a {
+  color: #38bdf8;
+}
+
+body.dark .card a:hover {
+  color: #7dd3fc;
+}
 
     .toggle-btn {
       cursor: pointer;
@@ -437,6 +505,7 @@ body.dark .services-list strong {
 
 <header>
   <nav>
+    <div class="container">
     <div class="logo-container">
       <img src="assets/images/logounnnatel.png" alt="Unnatel Technologies Logo" class="logo">
       <strong class="brand-name">Unnatel Technologies</strong>
