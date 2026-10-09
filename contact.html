@@ -22,65 +22,7 @@
       transition: background 0.3s ease, color 0.3s ease;
     }
 
-    /* HEADER / NAVIGATION - SAME AS INDEX.HTML */
-    header {
-      background: linear-gradient(90deg, #0d1b2a, #1b263b);
-      color: #fff;
-      padding: 15px 40px;
-      box-shadow: 0 2px 10px rgba(0,0,0,.2);
-      position: sticky;
-      top: 0;
-      z-index: 40;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: 500;
-      transition: color .3s ease;
-    }
-
-    nav a:hover {
-      color: #00c6ff;
-    }
-
-    nav a.active {
-      color: #00c6ff;
-      font-weight: 700;
-      border-bottom: 2px solid #00c6ff;
-      padding-bottom: 4px;
-    }
-
-    /* SAME LOGO & BRAND TITLE AS INDEX.HTML */
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .logo {
-      width: 70px;
-      height: 70px;
-      object-fit: contain;
-      border-radius: 12px;
-      background: #ffffff;
-      padding: 4px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
-
-    .brand-name {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: #ffffff;
-      letter-spacing: 0.5px;
-    }
+   
 
     /* HERO BANNER */
     .hero-banner {
@@ -222,68 +164,7 @@
       color: #00c6ff;
     }
 
-    /* MOBILE RESPONSIVE FIX - SAME AS INDEX.HTML */
-    @media (max-width: 768px) {
-      header {
-        padding: 15px 20px;
-      }
-
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-      }
-
-      nav div {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      nav a {
-        margin-left: 0;
-        font-size: 14px;
-      }
-
-      .logo {
-        width: 50px;
-        height: 50px;
-      }
-
-      .brand-name {
-        font-size: 1.5rem;
-      }
-
-      .toggle-btn {
-        width: 100%;
-        text-align: center;
-      }
-
-      .hero-banner {
-        padding: 50px 15px;
-      }
-
-      .hero-banner h1 {
-        font-size: 1.8em;
-        line-height: 1.2;
-      }
-
-      .hero-banner p {
-        font-size: 1em;
-      }
-
-      .contact-section {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 15px;
-        margin: 30px auto;
-      }
-
-      .card {
-        width: 100%;
-        box-sizing: border-box;
-      }
+    
     }
   </style>
 </head>
@@ -297,7 +178,7 @@
       <strong class="brand-name">Unnatel Technologies</strong>
     </div>
 
-    <div>
+  <div class="nav-links">*
       <button class="toggle-btn" onclick="toggleDark()" id="themeToggle">
         Dark Mode
       </button>
