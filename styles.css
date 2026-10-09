@@ -38,80 +38,78 @@ a:hover {
 }
 
 
-/* ---------- HEADER ---------- */
+/* =*=======================================================
+   SHARED HEA*ER
+   ============================*============================ */
 
-/* =========================================================
-   SHARED HEADER
-   ========================================================= */
-
-header {
-  background: linear-g*adient(90deg,#0d1b2a,#1b263b);
-  b*ckdrop-filter: blur(20px);
-  posit*on: sticky;
+h*ader {
+  background: linear-gradie*t(90deg, #0d1b2a, #1b263b);
+  back*rop-filter: blur(20px);
+  position* sticky;
   top: 0;
-  z-index: 1*00;
+  z-index: 1000*
   padding: 14px 40px;
-  box-sh*dow: 0 2px 20px rgba(0,0,0,.18);
-}*
+  box-shado*: 0 2px 20px rgba(0, 0, 0, 0.18);
+*
+
 nav {
   max-width: 1300px;
-  marg*n: 0 auto;
+  mar*in: 0 auto;
   display: flex;
-  just*fy-content: space-between;
-  align*items: center;
+  jus*ify-content: space-between;
+  alig*-items: center;
   gap: 30px;
 }
 
-.lo*o-container {
+.l*go-container {
   display: flex;
-  a*ign-items: center;
+  *lign-items: center;
   gap: 16px;
-}
-*.logo {
+}*
+.logo {
   width: 72px;
-  height: 7*px;
+  height: *2px;
   object-fit: contain;
-  backg*ound: #ffffff;
-  border-radius: 14*x;
+  back*round: #ffffff;
+  border-radius: 1*px;
   padding: 4px;
-  box-shadow: 0*5px 15px rgba(0,0,0,.3);
+  box-shadow: * 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.brand*name {
+.*rand-name {
   font-size: 2.2rem;
-  font*weight: 800;
-  color: #ffffff;
-  l*tter-spacing: .5px;
-  line-height:*1;
+ *font-weight: 800;
+  color: #ffffff*
+  letter-spacing: 0.5px;
+  line-h*ight: 1;
 }
 
 .nav-links {
-  display: flex*
+  display* flex;
   align-items: center;
-  gap: 10p*;
+  ga*: 10px;
   flex-wrap: wrap;
 }
 
-.nav-links*a {
+.nav*links a {
   color: #ffffff;
-  text-decor*tion: none;
-  padding: 10px 16px;
-* border-radius: 10px;
-  font-weigh*: 500;
-  transition: .3s ease;
+  text*decoration: none;
+  padding: 10px *6px;
+  border-radius: 10px;
+  font*weight: 500;
+  transition: all 0.3* ease;
 }
 
-*nav-links a:hover {
-  color: #00c6*f;
-  background: rgba(255,255,255,*08);
+.nav-links a:hover {
+  c*lor: #00c6ff;
+  background: rgba(2*5, 255, 255, 0.08);
 }
 
-.nav-links a.active {
-  co*or: #00c6ff;
-  background: rgba(0,*98,255,.12);
-  border: 1px solid r*ba(0,198,255,.35);
+.nav-links *.active {
+  color: #00c6ff;
+  back*round: rgba(0, 198, 255, 0.12);
+  *order: 1px solid rgba(0, 198, 255,*0.35);
 }
-```
 
 
 /* ---------- MAIN CONTAINER ---------- */
@@ -242,19 +240,19 @@ button:hover,
 /* ---------- FOOTER ---------- */
 
 footer {
-  margin-top: 6*px;
+ *margin-top: 60px;
   padding: 35px 20px;
-  text-a*ign: center;
-  background: #0d1b2a*
+  text-align: center;
+  background: #0d1b2a;
   color: #cbd5e1;
-  border-top: 1*x solid rgba(255,255,255,.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-*ooter p {
+footer p {
   margin: 0;
 }
 
-footer a*{
+footer a {
   color: #38bdf8;
 }
 
@@ -285,12 +283,12 @@ body.dark {
 }
 
 body.dark header {
-  backgro*nd: linear-gradient(
+  background: linear-gradient(
     90deg,
-  * #020617,
+    #020617,
     #111827
   );
-  borde*-bottom: 1px solid rgba(255,255,25*,.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 body.dark .hero {
@@ -320,9 +318,9 @@ body.dark h3 {
   color: #f1f5f9;
 }
 
-body.dark *ooter {
+body.dark footer {
   background: #020617;
-  c*lor: #94a3b8;
+  color: #94a3b8;
 }
 
 body.dark footer a {
