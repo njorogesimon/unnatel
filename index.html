@@ -498,6 +498,191 @@ body.dark .services-list strong {
 
 
     }
+    
+/* =========================================
+   UNNATEL TECHNOLOGIES — DARK MODE FIX
+   Improves visibility without changing layout
+========================================= */
+
+body.dark {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+/* Main content cards */
+body.dark .card {
+  background: #1e293b;
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+body.dark .card h1,
+body.dark .card h2,
+body.dark .card h3,
+body.dark .card h4 {
+  color: #f8fafc;
+}
+
+body.dark .card p,
+body.dark .card li,
+body.dark .card span,
+body.dark .card label {
+  color: #cbd5e1;
+}
+
+/* Links inside cards */
+body.dark .card a {
+  color: #7dd3fc;
+}
+
+body.dark .card a:hover {
+  color: #bae6fd;
+}
+
+/* Statistics cards */
+body.dark .stat-card {
+  background: #1e293b;
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+body.dark .stat-card h2 {
+  color: #38bdf8;
+}
+
+body.dark .stat-card p {
+  color: #e2e8f0;
+}
+
+/* Service cards */
+body.dark .service-box {
+  background: #1e293b;
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+body.dark .service-box h3 {
+  color: #f8fafc;
+}
+
+body.dark .service-box p {
+  color: #cbd5e1;
+}
+
+/* Services list */
+body.dark .services-list strong {
+  color: #f8fafc;
+}
+
+body.dark .services-list span {
+  color: #cbd5e1;
+}
+
+body.dark .services-list span::before {
+  color: #94a3b8;
+}
+
+/* Hero section — retain the original glowing gradient */
+body.dark .hero-banner {
+  background:
+    radial-gradient(circle at top right, #00c6ff33, transparent 40%),
+    radial-gradient(circle at bottom left, #0077ff33, transparent 40%),
+    linear-gradient(135deg, #081120, #0d1b2a, #14213d);
+  color: #f8fafc;
+}
+
+body.dark .hero-banner h1,
+body.dark .hero-banner h1 span {
+  color: #f8fafc;
+}
+
+body.dark .hero-banner h1 span {
+  color: #38bdf8;
+}
+
+body.dark .hero-banner p {
+  color: #dbeafe;
+}
+
+body.dark .hero-badge {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+/* Hero buttons */
+body.dark .btn-primary {
+  background: linear-gradient(135deg, #0284c7, #0ea5e9);
+  color: #ffffff;
+}
+
+body.dark .btn-secondary {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+body.dark .btn-primary:hover,
+body.dark .btn-secondary:hover {
+  color: #ffffff;
+}
+
+/* Navigation */
+body.dark header {
+  background: linear-gradient(90deg, #020617, #1e293b);
+}
+
+body.dark nav a {
+  color: #e2e8f0;
+}
+
+body.dark nav a:hover,
+body.dark nav a.active {
+  color: #38bdf8;
+}
+
+/* Brand remains visible */
+body.dark .brand-name {
+  color: #ffffff;
+}
+
+/* Theme toggle */
+body.dark .toggle-btn {
+  color: #ffffff;
+}
+
+/* Footer */
+body.dark footer {
+  background: #020617;
+  color: #e2e8f0;
+}
+
+/* Form controls, if present on this page */
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #475569;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* General text visibility */
+body.dark small,
+body.dark figcaption {
+  color: #cbd5e1;
+}
+
+body.dark hr {
+  border-color: #475569;
+}
+
   </style>
 </head>
 
@@ -650,21 +835,45 @@ body.dark .services-list strong {
 </footer>
 
 <!-- Dark Mode Script -->
+
+<script>
+function applyTheme(theme) {
+  document.body.classList.toggle("dark", theme === "dark");
+
+  const button = document.getElementById("themeToggle");
+
+  if (button) {
+    button.textContent =
+      theme === "dark" ? "Light Mode" : "Dark Mode";
+    button.setAttribute(
+      "aria-label",
+      theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+    );
+  }
+
+  localStorage.setItem("theme", theme);
+}
 <script>
 function toggleDark() {
-  document.body.classList.toggle("dark");
-  if (document.body.classList.contains("dark")) {
-    localStorage.setItem("theme", "dark");
-  } else {
-    localStorage.setItem("theme", "light");
-  }
+  const isDark = document.body.classList.contains("dark");
+  applyTheme(isDark ? "light" : "dark");
 }
-window.onload = function () {
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark");
-  }
-};
+
+(function initializeTheme() {
+  const savedTheme = localStorage.getItem("theme") || "light";
+  document.body.classList.toggle("dark", savedTheme === "dark");
+
+  window.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("themeToggle");
+
+    if (button) {
+      button.textContent =
+        savedTheme === "dark" ? "Light Mode" : "Dark Mode";
+    }
+  });
+})();
 </script>
+
 <script>
 const currentPage = window.location.pathname.split("/").pop();
 
