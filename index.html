@@ -853,25 +853,25 @@ function applyTheme(theme) {
 
   localStorage.setItem("theme", theme);
 }
+<!-- Dark Mode Script -->
 <script>
 function toggleDark() {
-  const isDark = document.body.classList.contains("dark");
-  applyTheme(isDark ? "light" : "dark");
+  document.body.classList.toggle("dark");
+
+  const dark = document.body.classList.contains("dark");
+
+  localStorage.setItem("theme", dark ? "dark" : "light");
+
+  document.getElementById("themeToggle").textContent =
+    dark ? "Light Mode" : "Dark Mode";
 }
 
-(function initializeTheme() {
-  const savedTheme = localStorage.getItem("theme") || "light";
-  document.body.classList.toggle("dark", savedTheme === "dark");
-
-  window.addEventListener("DOMContentLoaded", function () {
-    const button = document.getElementById("themeToggle");
-
-    if (button) {
-      button.textContent =
-        savedTheme === "dark" ? "Light Mode" : "Dark Mode";
-    }
-  });
-})();
+window.onload = function () {
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    document.getElementById("themeToggle").textContent = "Light Mode";
+  }
+};
 </script>
 
 <script>
