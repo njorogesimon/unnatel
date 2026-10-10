@@ -34,30 +34,34 @@
       z-index: 40;
     }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
     nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: 500;
-      transition: color .3s ease;
-    }
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
 
-    nav a:hover {
-      color: #00c6ff;
-    }
+nav a:hover {
+  color: #00c6ff;
+  border-bottom-color: #00c6ff;
+}
 
-    nav a.active {
-      color: #00c6ff;
-      font-weight: 700;
-      border-bottom: 2px solid #00c6ff;
-      padding-bottom: 4px;
-    }
+nav a.active {
+  color: #00c6ff;
+  font-weight: 700;
+  border-bottom: 2px solid #00c6ff;
+}
+
+body.dark nav a:hover,
+body.dark nav a.active {
+  color: #38bdf8;
+  border-bottom-color: #38bdf8;
+}
 
     /* Logo & Brand */
     .logo-container {
@@ -762,6 +766,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 </script>
+<script>
+const currentPage = window.location.pathname.split("/").pop();
 
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(link => {
+  const linkPage = link.getAttribute("href");
+
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  }
+});
+</script>
 </body>
 </html>
