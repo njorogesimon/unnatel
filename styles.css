@@ -61,8 +61,7 @@ nav {
 
 /* ---------- BRAND ---------- */
 
-.brand,
-header nav a:first-child {
+.brand {
   display: flex !important;
   align-items: center !important;
   gap: 14px !important;
@@ -89,8 +88,7 @@ header nav img {
 /* Header company name */
 
 .brand span,
-.brand,
-header nav a:first-child {
+.brand {
   font-size: 1.65rem !important;
   font-weight: 800 !important;
   color: #ffffff !important;
