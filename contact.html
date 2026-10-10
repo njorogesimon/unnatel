@@ -273,28 +273,18 @@
         font-size: 1em;
       }
 
-   .contact-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin: 50px auto;
-  max-width: 1100px;
-  padding: 0 20px;
-}
+      .contact-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+        margin: 30px auto;
+      }
 
-.card {
-  flex: 0 1 300px;
-
+      .card {
+        width: 100%;
         box-sizing: border-box;
       }
-      .social-card {
-  max-width: 500px;
-  margin-left:
     }
-      .social-card {
-  flex-basis: 100%;
-}
   </style>
 </head>
 
@@ -308,9 +298,9 @@
     </div>
 
     <div>
-    <button class="toggle-btn" id="themeToggle">
-  🌙 Dark Mode
-</button>
+      <button class="toggle-btn" onclick="toggleDark()" id="themeToggle">
+        Dark Mode
+      </button>
 
       <a href="index.html">Home</a>
       <a href="apps.html">Apps</a>
@@ -337,33 +327,12 @@
     <p>For general inquiries, technical support, or partnership opportunities.</p>
   </div>
 
-<div class="card social-card">
-  <div class="contact-icon">🌐</div>
-
-  <h2>Social Media</h2>
-
-  <p>
-    <a href="https://www.tiktok.com/@unnateltech" target="_blank" rel="noopener noreferrer">
-      TikTok
-    </a>
-    |
-    <a href="https://www.facebook.com/unnateltech/" target="_blank" rel="noopener noreferrer">
-      Facebook
-    </a>
-    |
-    <a href="https://www.linkedin.com/in/unnateltech" target="_blank" rel="noopener noreferrer">
-      LinkedIn
-    </a>
-    |
-    <a href="https://wa.me/254782223727?text=Hello%20Unnatel%20Technologies" target="_blank" rel="noopener noreferrer">
-      WhatsApp
-    </a>
-  </p>
-
-  <p>
-    Follow us for updates, news, and community engagement.
-  </p>
-</div>
+  <div class="card">
+    <div class="contact-icon">📞</div>
+    <h2>Phone</h2>
+    <p><a href="tel:+254712991811">+254 712 991 811</a> || <a href="tel:+254736163615">+254 736 163 615</a></p>
+    <p>Call us during business hours for immediate assistance.</p>
+  </div>
 
   <div class="card">
     <div class="contact-icon">📍</div>
@@ -392,38 +361,36 @@
 
 <!-- Dark Mode Script -->
 <script>
-function applyTheme(theme) {
-  document.body.classList.toggle("dark", theme === "dark");
+function toggleDark() {
+  document.body.classList.toggle("dark");
 
-  const button = document.getElementById("themeToggle");
-
-  if (button) {
-    button.textContent =
-      theme === "dark"
-        ? "☀️ Light Mode"
-        : "🌙 Dark Mode";
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+    document.getElementById("themeToggle").textContent = "Light Mode";
+  } else {
+    localStorage.setItem("theme", "light");
+    document.getElementById("themeToggle").textContent = "Dark Mode";
   }
-
-  localStorage.setItem("theme", theme);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const savedTheme =
-    localStorage.getItem("theme") || "light";
+window.onload = function () {
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    document.getElementById("themeToggle").textContent = "Light Mode";
+  }
+};
+</script>
 
-  applyTheme(savedTheme);
+<script>
+const currentPage = window.location.pathname.split("/").pop() || "contact.html";
 
-  const button = document.getElementById("themeToggle");
+const navLinks = document.querySelectorAll("nav a");
 
-  if (button) {
-    button.addEventListener("click", () => {
-      const newTheme =
-        document.body.classList.contains("dark")
-          ? "light"
-          : "dark";
+navLinks.forEach(link => {
+  const linkPage = link.getAttribute("href");
 
-      applyTheme(newTheme);
-    });
+  if (linkPage === currentPage) {
+    link.classList.add("active");
   }
 });
 </script>
